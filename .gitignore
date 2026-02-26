@@ -1,0 +1,11 @@
+node_modules/
+dist/
+storybook-static/
+.DS_Store
+*.local
+.env
+.env.*
+coverage/
+*.tsbuildinfo
+*.log
+pnpm-debug.log*
