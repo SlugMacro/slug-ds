@@ -16,7 +16,8 @@
 
 /* Monospace elements — DS mono font + subtle bg for distinction */
 .sb-preparing-docs code,
-.sb-preparing-docs pre {
+.sb-preparing-docs pre,
+.docblock-argstable-body td > div > div > span {
   font-family: var(--font-mono);
   background: var(--color-bg-elevated);
 }
