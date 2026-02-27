@@ -131,6 +131,9 @@ export type {
   TabsContentProps,
 } from "./components/Tabs";
 
+export { Link } from "./components/Link";
+export type { LinkProps } from "./components/Link";
+
 // Utilities
 export { cn } from "./utils/cn";
 export { mergeRefs } from "./utils/mergeRefs";
