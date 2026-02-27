@@ -1,3 +1,4 @@
+import { useState } from "react";
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
 const meta: Meta = {
@@ -8,17 +9,35 @@ const meta: Meta = {
 export default meta;
 type Story = StoryObj;
 
+function CopyButton({ text }: { text: string }) {
+  const [copied, setCopied] = useState(false);
+  const handleCopy = () => {
+    navigator.clipboard.writeText(text);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 1500);
+  };
+  return (
+    <button
+      onClick={handleCopy}
+      className="opacity-0 group-hover:opacity-100 text-[10px] font-mono text-fg-secondary hover:text-fg-primary transition-all cursor-pointer"
+    >
+      {copied ? "Copied!" : "Copy"}
+    </button>
+  );
+}
+
 function Swatch({ token, cssVar }: { token: string; cssVar: string }) {
   return (
-    <div className="flex items-center gap-3">
+    <div className="group flex items-center gap-3">
       <div
         className="w-10 h-10 shrink-0 border border-border-subtle"
         style={{ background: `var(${cssVar})` }}
       />
-      <div className="flex flex-col gap-0.5 min-w-0">
+      <div className="flex flex-col gap-0.5 min-w-0 flex-1">
         <span className="text-sm text-fg-primary font-medium truncate">{token}</span>
-        <span className="font-mono text-xs text-fg-tertiary truncate">{cssVar}</span>
+        <span className="font-mono text-xs text-fg-secondary truncate">{cssVar}</span>
       </div>
+      <CopyButton text={cssVar} />
     </div>
   );
 }

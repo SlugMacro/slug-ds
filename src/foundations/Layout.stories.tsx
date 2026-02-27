@@ -1,3 +1,4 @@
+import { useState } from "react";
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import { controlHeight, container, iconSize, avatarSize } from "../tokens/layout";
 
@@ -9,16 +10,37 @@ const meta: Meta = {
 export default meta;
 type Story = StoryObj;
 
-function TokenRow({ name, value, visual }: { name: string; value: string; visual: React.ReactNode }) {
+function CopyButton({ text }: { text: string }) {
+  const [copied, setCopied] = useState(false);
+  const handleCopy = () => {
+    navigator.clipboard.writeText(text);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 1500);
+  };
   return (
-    <div className="flex items-center gap-4 border-b border-border-subtle py-3">
-      <span className="font-mono text-sm text-fg-secondary w-16 text-right shrink-0">
+    <button
+      onClick={handleCopy}
+      className="opacity-0 group-hover:opacity-100 text-[10px] font-mono text-fg-secondary hover:text-fg-primary transition-all cursor-pointer"
+    >
+      {copied ? "Copied!" : "Copy"}
+    </button>
+  );
+}
+
+function TokenRow({ name, value, cssVar, visual }: { name: string; value: string; cssVar: string; visual: React.ReactNode }) {
+  return (
+    <div className="group flex items-center gap-4 border-b border-border-subtle py-3">
+      <span className="font-mono text-sm text-fg-primary w-16 text-right shrink-0">
         {name}
       </span>
       {visual}
-      <span className="font-mono text-xs text-fg-tertiary bg-bg-elevated px-1.5 py-0.5">
+      <span className="font-mono text-xs text-fg-secondary bg-bg-elevated border border-border-subtle px-1.5 py-0.5">
         {value}
       </span>
+      <span className="font-mono text-xs text-fg-tertiary truncate">
+        {cssVar}
+      </span>
+      <CopyButton text={cssVar} />
     </div>
   );
 }
@@ -38,6 +60,7 @@ export const ControlHeights: Story = {
           key={name}
           name={name}
           value={value}
+          cssVar={`h-[${value}]`}
           visual={
             <div
               className="bg-bg-primary shrink-0 w-32"
@@ -62,6 +85,7 @@ export const Containers: Story = {
           key={name}
           name={name}
           value={value}
+          cssVar={`max-w-[${value}]`}
           visual={
             <div
               className="h-4 bg-bg-primary shrink-0"
@@ -86,6 +110,7 @@ export const IconSizes: Story = {
           key={name}
           name={`${name}px`}
           value={value}
+          cssVar={`size-[${value}]`}
           visual={
             <div
               className="bg-bg-primary shrink-0"
@@ -110,6 +135,7 @@ export const AvatarSizes: Story = {
           key={name}
           name={`${name}px`}
           value={value}
+          cssVar={`size-[${value}]`}
           visual={
             <div
               className="bg-bg-primary shrink-0 rounded-full"
