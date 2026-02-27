@@ -111,13 +111,38 @@
 
 ---
 
-## Phase 7d: Sync Components từ Figma — PENDING
+## Phase 7d: Sync Components từ Figma — IN PROGRESS
 
-- [ ] So sánh component hiện có với Figma design
-- [ ] Update variants/styles cho khớp Figma (colors, spacing, radii, typography)
-- [ ] Tạo component mới nếu Figma có mà slug-ds chưa có
-- [ ] Update Storybook stories
+- [x] Link component (tạo mới từ Figma design)
+- [x] Button icon padding balance (icon-side padding = vertical space)
+- [x] IconButton icon-only sizing (bump 1 tier per Figma IconSlot spec)
+- [ ] So sánh remaining components với Figma design
+- [ ] Update variants/styles cho khớp Figma
 - [ ] Verify: build + tests + visual check
+
+---
+
+## Phase 8: Storybook Theming & Foundation Pages — COMPLETE
+
+### Storybook Theming
+
+- [x] Geist font-feature-settings (ss01–ss09) globally
+- [x] Storybook manager: Geist fonts + font features for sidebar/toolbar
+- [x] Sidebar component icon → mingcute ComponentsLine
+- [x] Unified border color: `rgba(135, 135, 135, 0.25)` across all UI
+- [x] Border-radius: 0 everywhere (sharp corners)
+- [x] Kill Nunito Sans — force DS fonts (Geist/Geist Mono) in docs
+- [x] Kill letter-spacing in sidebar + docs headings
+- [x] Elevated bg on mono/code elements for visual distinction
+
+### Foundation Pages
+
+- [x] Typography (type scale, font weights, font families)
+- [x] Colors (foreground, background, border, primary palette)
+- [x] Spacing (4px base scale with visual bars)
+- [x] Shadows (sm, md, lg, xl elevation)
+- [x] Radii (none → full border-radius scale)
+- [x] Layout (control heights, containers, icon sizes, avatar sizes)
 
 ---
 
@@ -132,3 +157,5 @@
 | 2026-02-27 | 6     | Docs (TOKENS.md, PATTERNS.md), CHANGELOG.md, version bump to 0.1.0.                                                                                                                                                                                                                     |
 | 2026-02-27 | 7a-7b | npm publish setup (package.json, LICENSE, README.md, CONTRIBUTING.md). CI/CD workflows (ci.yml, release.yml). All verified: 391 tests pass, build clean, pack dry-run OK.                                                                                                               |
 | 2026-02-27 | 7c    | Figma token sync complete. Primary color: purple→green (#9AD81A). 100+ CSS custom properties (light+dark). New tokens: radii (10 values), typography (9xl, 9 weights, letter-spacing), layout (control heights, containers, icons, avatars). All 29 components updated. 391 tests pass. |
+| 2026-02-27 | 7d    | Link component, Button icon padding balance, IconButton icon-only sizing from Figma specs. 408 tests pass.                                                                                                                                                                             |
+| 2026-02-27 | 8     | Storybook fully themed (Geist fonts, DS borders, custom icons, elevated code bg). 6 foundation pages: Typography, Colors, Spacing, Shadows, Radii, Layout.                                                                                                                             |
