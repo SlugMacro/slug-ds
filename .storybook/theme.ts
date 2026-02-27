@@ -16,8 +16,8 @@ export default create({
   appBg: "#0a0a0a",
   appContentBg: "#000000",
   appPreviewBg: "#000000",
-  appBorderColor: "#505050",
-  appBorderRadius: 8,
+  appBorderColor: "rgba(135, 135, 135, 0.25)",
+  appBorderRadius: 0,
 
   // Text
   textColor: "#fafafa",
@@ -32,9 +32,9 @@ export default create({
 
   // Form
   inputBg: "#1e1e1e",
-  inputBorder: "#505050",
+  inputBorder: "rgba(135, 135, 135, 0.25)",
   inputTextColor: "#fafafa",
-  inputBorderRadius: 6,
+  inputBorderRadius: 0,
 
   // Booleans
   booleanBg: "#1e1e1e",

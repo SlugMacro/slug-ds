@@ -1,5 +1,19 @@
-/* Storybook docs — story preview blocks */
+/* Unified border styling for Storybook docs */
+
+/* Story preview containers */
 .sbdocs.sbdocs-preview {
-  border-color: var(--color-border-subtle);
-  border-radius: var(--radius-md);
+  border-color: rgba(135, 135, 135, 0.25);
+  border-radius: 0;
+}
+
+/* "Show code" toggle button */
+.docblock-code-toggle {
+  border-color: rgba(135, 135, 135, 0.25) !important;
+  border-radius: 0 !important;
+}
+
+/* Loading placeholder block */
+.sb-previewBlock {
+  border-color: rgba(135, 135, 135, 0.25);
+  border-radius: 0;
 }
