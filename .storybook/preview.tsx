@@ -1,8 +1,14 @@
 import type { Preview } from "@storybook/react-vite";
+import "@fontsource/geist-sans/latin.css";
+import "@fontsource/geist-mono/latin.css";
 import "../src/styles.css";
+import { TooltipProvider } from "../src/components/Tooltip";
+import { Toaster } from "../src/components/Toast";
+import theme from "./theme";
 
 const preview: Preview = {
   parameters: {
+    docs: { theme },
     controls: {
       matchers: {
         color: /(background|color)$/i,
@@ -36,9 +42,15 @@ const preview: Preview = {
     (Story, context) => {
       const theme = (context.globals.theme as string) || "light";
       return (
-        <div data-theme={theme} className="bg-bg-base text-fg-primary p-8 min-h-[200px]">
-          <Story />
-        </div>
+        <TooltipProvider delayDuration={200}>
+          <div
+            data-theme={theme}
+            className="font-sans bg-bg-base text-fg-primary p-8 min-h-[200px]"
+          >
+            <Story />
+            <Toaster />
+          </div>
+        </TooltipProvider>
       );
     },
   ],
