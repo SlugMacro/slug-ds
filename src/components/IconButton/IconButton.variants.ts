@@ -17,10 +17,10 @@ export const iconButtonVariants = cva(
         ghost: "",
       },
       size: {
-        xs: "h-7 w-7 rounded-sm [&>svg]:size-3",
-        sm: "h-9 w-9 rounded-md [&>svg]:size-4",
-        md: "h-11 w-11 rounded-lg [&>svg]:size-5",
-        lg: "h-13 w-13 rounded-xl [&>svg]:size-6",
+        xs: "h-7 w-7 rounded-sm [&>svg]:size-4",
+        sm: "h-9 w-9 rounded-md [&>svg]:size-5",
+        md: "h-11 w-11 rounded-lg [&>svg]:size-6",
+        lg: "h-13 w-13 rounded-xl [&>svg]:size-7",
       },
     },
     compoundVariants: [

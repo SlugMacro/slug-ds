@@ -178,6 +178,35 @@ export const WithIcons: Story = {
       <Button variant="outline" intent="neutral" rightIcon={<ArrowRightLine />}>
         Next
       </Button>
+      <Button leftIcon={<AddLine />} rightIcon={<ArrowRightLine />}>
+        Both icons
+      </Button>
+    </div>
+  ),
+};
+
+export const IconPaddingBalance: Story = {
+  name: "Icon Padding Balance",
+  render: () => (
+    <div className="flex flex-col gap-4">
+      <p className="text-fg-secondary text-sm">
+        Icon-side padding matches vertical space for optical balance.
+      </p>
+      {(["xs", "sm", "md", "lg"] as const).map((size) => (
+        <div key={size} className="flex items-center gap-3">
+          <span className="text-fg-secondary text-xs w-6">{size}</span>
+          <Button size={size}>No icon</Button>
+          <Button size={size} leftIcon={<AddLine />}>
+            Left
+          </Button>
+          <Button size={size} rightIcon={<ArrowRightLine />}>
+            Right
+          </Button>
+          <Button size={size} leftIcon={<AddLine />} rightIcon={<ArrowRightLine />}>
+            Both
+          </Button>
+        </div>
+      ))}
     </div>
   ),
 };

@@ -1,0 +1,6 @@
+/* Geist font + stylistic sets for Storybook manager UI (sidebar, toolbar) */
+*,
+*::before,
+*::after {
+  font-feature-settings: "ss01" on, "ss03" on, "ss04" on, "ss05" on, "ss06" on, "ss07" on, "ss08" on, "ss09" on;
+}
