@@ -11,13 +11,13 @@
 .sb-nopreview *,
 .sb-errordisplay,
 .sb-errordisplay * {
-  font-family: "Geist", ui-sans-serif, system-ui, sans-serif;
+  font-family: var(--font-sans);
 }
 
-/* Monospace elements keep Geist Mono */
+/* Monospace elements use DS mono token */
 .sb-preparing-docs code,
 .sb-preparing-docs pre {
-  font-family: "Geist Mono", ui-monospace, monospace;
+  font-family: var(--font-mono);
 }
 
 /* Kill letter-spacing on section headings (STORIES, etc.) */
