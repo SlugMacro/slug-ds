@@ -1,4 +1,31 @@
-/* Unified border styling for Storybook docs */
+/* =============================================
+   Storybook docs — DS overrides
+   ============================================= */
+
+/* Force DS fonts everywhere — kill Nunito Sans */
+.sb-preparing-docs,
+.sb-preparing-docs *,
+.sb-show-main,
+.sb-show-main *,
+.sb-nopreview,
+.sb-nopreview *,
+.sb-errordisplay,
+.sb-errordisplay * {
+  font-family: "Geist", ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Monospace elements keep Geist Mono */
+.sb-preparing-docs code,
+.sb-preparing-docs pre {
+  font-family: "Geist Mono", ui-monospace, monospace;
+}
+
+/* Kill letter-spacing on section headings (STORIES, etc.) */
+.sbdocs h2 {
+  letter-spacing: 0 !important;
+}
+
+/* ── Borders ── */
 
 /* Story preview containers */
 .sbdocs.sbdocs-preview {
