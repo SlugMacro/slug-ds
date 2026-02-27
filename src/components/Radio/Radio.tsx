@@ -31,7 +31,7 @@ const RadioRoot = forwardRef<HTMLDivElement, RadioGroupProps>(function RadioRoot
       {label && <legend className="text-sm font-medium text-fg-primary">{label}</legend>}
       {group}
       {hasError && (
-        <p id={errorId} className="text-sm text-error">
+        <p id={errorId} className="text-sm text-fg-danger">
           {errorMessage}
         </p>
       )}
@@ -63,7 +63,7 @@ const RadioItem = forwardRef<HTMLButtonElement, RadioItemProps>(function RadioIt
               {label}
             </label>
           )}
-          {description && <p className="text-sm text-fg-muted">{description}</p>}
+          {description && <p className="text-sm text-fg-tertiary">{description}</p>}
         </div>
       )}
     </div>

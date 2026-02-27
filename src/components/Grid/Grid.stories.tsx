@@ -34,7 +34,7 @@ export const AllColumnCounts: Story = {
     <div className="space-y-6">
       {([1, 2, 3, 4, 6] as const).map((cols) => (
         <div key={cols}>
-          <p className="text-sm text-fg-muted mb-2">columns={cols}</p>
+          <p className="text-sm text-fg-tertiary mb-2">columns={cols}</p>
           <Grid columns={cols} gap={2}>
             {Array.from({ length: cols * 2 }, (_, i) => (
               <Cell key={i}>{i + 1}</Cell>

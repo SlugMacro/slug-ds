@@ -101,7 +101,7 @@ const DropdownMenuItem = forwardRef<HTMLDivElement, DropdownMenuItemProps>(
     >
       {children}
       {shortcut && (
-        <span className="ml-auto text-xs text-fg-muted tracking-widest">{shortcut}</span>
+        <span className="ml-auto text-xs text-fg-tertiary tracking-widest">{shortcut}</span>
       )}
     </RadixDropdownMenu.Item>
   ),

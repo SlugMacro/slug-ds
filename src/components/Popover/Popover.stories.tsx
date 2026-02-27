@@ -24,7 +24,7 @@ export const Default: Story = {
           <div className="space-y-4">
             <div className="space-y-2">
               <h4 className="text-sm font-medium text-fg-primary">Dimensions</h4>
-              <p className="text-sm text-fg-muted">Set the dimensions for the layer.</p>
+              <p className="text-sm text-fg-tertiary">Set the dimensions for the layer.</p>
             </div>
             <div className="space-y-2">
               <Label htmlFor="width">Width</Label>
@@ -70,11 +70,13 @@ export const WithCloseButton: Story = {
             <div className="flex items-start justify-between">
               <div className="space-y-1">
                 <h4 className="text-sm font-medium text-fg-primary">Notification settings</h4>
-                <p className="text-sm text-fg-muted">Choose what you want to be notified about.</p>
+                <p className="text-sm text-fg-tertiary">
+                  Choose what you want to be notified about.
+                </p>
               </div>
               <Popover.Close>
                 <button
-                  className="rounded-sm text-fg-muted hover:text-fg-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-primary"
+                  className="rounded-sm text-fg-tertiary hover:text-fg-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring-primary"
                   aria-label="Close"
                 >
                   <svg

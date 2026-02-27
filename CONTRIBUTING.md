@@ -369,3 +369,36 @@ When reviewing (or self-reviewing) a component:
 - [ ] Storybook stories complete (default, variants, states, edge cases, themes)
 - [ ] Props have JSDoc comments
 - [ ] Exported from package index
+
+---
+
+## Release Process
+
+### Creating a Changeset
+
+When your PR includes user-facing changes (new components, bug fixes, API changes):
+
+1. Run `pnpm changeset`
+2. Select the change type:
+   - **patch** — Bug fixes, documentation updates
+   - **minor** — New components, new variants, new features (non-breaking)
+   - **major** — Breaking API changes (prop removals, renames, behavior changes)
+3. Write a clear, consumer-facing summary of what changed
+4. Commit the generated `.changeset/*.md` file with your PR
+
+### Publishing a Release
+
+1. Merge all PRs with changesets into `main`
+2. Run `pnpm version-packages` — consumes changesets, bumps version, updates CHANGELOG
+3. Review the generated changelog entry
+4. Commit: `git commit -m "chore(release): v{version}"`
+5. Tag: `git tag v{version}`
+6. Push: `git push --follow-tags`
+7. Run `pnpm release` — builds and publishes to npm
+
+The `prepublishOnly` script automatically runs lint, typecheck, test, and build before any publish.
+
+### CI/CD
+
+- Every PR runs lint, typecheck, test, and build via GitHub Actions
+- When a version tag (`v*`) is pushed, CI automatically publishes to npm using the `NPM_TOKEN` secret

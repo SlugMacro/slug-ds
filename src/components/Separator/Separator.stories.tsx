@@ -35,7 +35,7 @@ export const Vertical: Story = {
 export const Decorative: Story = {
   render: () => (
     <div className="space-y-4">
-      <p className="text-sm text-fg-muted">
+      <p className="text-sm text-fg-tertiary">
         Decorative separators use role=&quot;none&quot; and are hidden from screen readers.
       </p>
       <Separator decorative />

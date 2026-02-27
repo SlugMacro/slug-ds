@@ -2,8 +2,26 @@
   "name": "slug-ds",
   "version": "0.1.0",
   "description": "A production-grade React design system",
-  "private": true,
   "type": "module",
+  "license": "MIT",
+  "author": "slugmacro",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SlugMacro/slug-ds.git"
+  },
+  "homepage": "https://github.com/SlugMacro/slug-ds#readme",
+  "bugs": {
+    "url": "https://github.com/SlugMacro/slug-ds/issues"
+  },
+  "keywords": [
+    "react",
+    "design-system",
+    "components",
+    "ui",
+    "tailwindcss",
+    "typescript",
+    "accessible"
+  ],
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
@@ -40,7 +58,8 @@
     "build-storybook": "storybook build",
     "changeset": "changeset",
     "version-packages": "changeset version",
-    "release": "pnpm build && changeset publish"
+    "release": "pnpm build && changeset publish",
+    "prepublishOnly": "pnpm lint && pnpm typecheck && pnpm test && pnpm build"
   },
   "peerDependencies": {
     "react": ">=18",
@@ -100,6 +119,7 @@
     "vite-plugin-dts": "^4.5.4",
     "vitest": "^4.0.18"
   },
+  "packageManager": "pnpm@10.30.3",
   "pnpm": {
     "onlyBuiltDependencies": [
       "esbuild"

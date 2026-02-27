@@ -52,7 +52,7 @@ describe("Heading", () => {
 
     it("renders all color variants", () => {
       const { container } = render(<Heading color="accent">Accent</Heading>);
-      expect(container.firstChild).toHaveClass("text-accent-primary");
+      expect(container.firstChild).toHaveClass("text-fg-interactive");
     });
 
     it("applies truncate", () => {

@@ -31,7 +31,7 @@ const AlertRoot = forwardRef<HTMLDivElement, AlertProps>(
         <button
           type="button"
           onClick={onClose}
-          className="shrink-0 rounded-sm opacity-70 hover:opacity-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-primary"
+          className="shrink-0 rounded-sm opacity-70 hover:opacity-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring-primary"
           aria-label="Dismiss"
         >
           <CloseIcon />

@@ -16,9 +16,9 @@ export const tabsListVariants = cva(
 );
 
 export const tabsTriggerVariants = cva(
-  "inline-flex items-center justify-center whitespace-nowrap rounded-md px-3 py-1.5 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-primary disabled:pointer-events-none disabled:opacity-50 text-fg-secondary data-[state=active]:bg-bg-base data-[state=active]:text-fg-primary data-[state=active]:shadow-sm",
+  "inline-flex items-center justify-center whitespace-nowrap rounded-md px-3 py-1.5 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring-primary disabled:pointer-events-none disabled:opacity-50 text-fg-secondary data-[state=active]:bg-bg-canvas data-[state=active]:text-fg-primary data-[state=active]:shadow-sm",
 );
 
 export const tabsContentVariants = cva(
-  "mt-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-primary",
+  "mt-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring-primary",
 );

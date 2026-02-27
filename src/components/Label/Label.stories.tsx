@@ -44,7 +44,7 @@ export const WithInput: Story = {
         id="demo-input"
         type="email"
         placeholder="you@example.com"
-        className="w-full px-3 py-2 text-sm border border-border-default rounded-lg bg-bg-base text-fg-primary"
+        className="w-full px-3 py-2 text-sm border border-border-default rounded-lg bg-bg-canvas text-fg-primary"
       />
     </div>
   ),

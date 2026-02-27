@@ -257,6 +257,15 @@ tokens/
 - **Theming via CSS custom properties** — tokens map to `--color-fg-primary` etc., themes override these
 - **All new tokens must be documented** with usage examples
 
+### Figma Sync Rules
+
+- **Figma is the single source of truth** — when syncing from Figma, Figma values always override existing code values
+- **Never round, approximate, or "improve" Figma values** — use exact values (colors, spacing, radii, font sizes, line-heights, font-weights)
+- **Figma values are exact, but names can be normalized** — values (colors, sizes, weights) must be preserved exactly. Variable names should be mapped to semantic, dev-friendly token names following the project's naming convention (`fg-primary`, `bg-surface`, `border-default`). When Figma names are unclear or inconsistent, normalize them but document the mapping (Figma name → code token name) in the review log
+- **If Figma has modes (Light/Dark)** — generate both theme variants from Figma, do not invent values
+- **If a conflict exists between code and Figma** — Figma wins, update code to match
+- **Log all token changes** — when updating tokens from Figma, list what changed (old → new) in the review log
+
 ---
 
 ## Component Conventions

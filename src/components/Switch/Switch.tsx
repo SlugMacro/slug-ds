@@ -28,7 +28,7 @@ export const Switch = forwardRef<HTMLButtonElement, SwitchProps>(function Switch
               {label}
             </label>
           )}
-          {description && <p className="text-sm text-fg-muted">{description}</p>}
+          {description && <p className="text-sm text-fg-tertiary">{description}</p>}
         </div>
       )}
     </div>

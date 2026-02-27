@@ -38,6 +38,7 @@
 ## Phase 4: Layout + Form Primitives — COMPLETE
 
 ### Layout
+
 - [x] Box (polymorphic container)
 - [x] Stack (vertical/horizontal flex)
 - [x] Grid (CSS grid wrapper)
@@ -45,6 +46,7 @@
 - [x] Container (max-width wrapper)
 
 ### Form
+
 - [x] Label (Radix)
 - [x] Textarea (with label, error, helper text)
 - [x] Checkbox (Radix)
@@ -78,12 +80,55 @@
 
 ---
 
+## Phase 7a: npm Publish Setup — COMPLETE
+
+- [x] Verify + update `package.json` fields (xoá private, thêm license, author, repository, homepage, bugs, keywords, prepublishOnly, packageManager)
+- [x] Verify build output (ESM + CJS + types)
+- [x] Create LICENSE (MIT)
+- [x] Create README.md
+- [x] Dry run: `pnpm pack --dry-run` — output verified
+- [x] Document publish flow trong `CONTRIBUTING.md`
+
+---
+
+## Phase 7b: CI/CD Pipeline (GitHub Actions) — COMPLETE
+
+- [x] CI workflow: lint + typecheck + test + build on PR/push to main
+- [x] Release workflow: auto publish on `v*` tag push
+- [ ] Manual: Add `NPM_TOKEN` secret to GitHub repo settings
+
+---
+
+## Phase 7c: Sync Design Tokens từ Figma — COMPLETE
+
+- [x] Nhận Figma file từ user (5 variable collections exported as JSON)
+- [x] Đọc Figma variables (token-ui, color, typography, size-core, size-mode)
+- [x] Map Figma variable names → code token names
+- [x] Cập nhật `src/tokens/` cho khớp Figma values (colors, typography, radii, layout)
+- [x] Cập nhật CSS custom properties (light + dark themes — 100+ tokens)
+- [x] Update all 29 component variants to use new token names
+- [x] Verify: build + tests pass (391 tests, all pass)
+
+---
+
+## Phase 7d: Sync Components từ Figma — PENDING
+
+- [ ] So sánh component hiện có với Figma design
+- [ ] Update variants/styles cho khớp Figma (colors, spacing, radii, typography)
+- [ ] Tạo component mới nếu Figma có mà slug-ds chưa có
+- [ ] Update Storybook stories
+- [ ] Verify: build + tests + visual check
+
+---
+
 ## Review Log
 
 > Add review notes here after each major completion.
 
-| Date       | Phase   | Notes                                                           |
-| ---------- | ------- | --------------------------------------------------------------- |
-| 2026-02-27 | 1-4     | Foundation + 24 components complete. 341 tests, all pass.       |
-| 2026-02-27 | 5       | +5 components (Tabs, Accordion, Popover, Heading, Alert). 391 tests, all pass. Build verified. |
-| 2026-02-27 | 6       | Docs (TOKENS.md, PATTERNS.md), CHANGELOG.md, version bump to 0.1.0. |
+| Date       | Phase | Notes                                                                                                                                                                                                                                                                                   |
+| ---------- | ----- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 2026-02-27 | 1-4   | Foundation + 24 components complete. 341 tests, all pass.                                                                                                                                                                                                                               |
+| 2026-02-27 | 5     | +5 components (Tabs, Accordion, Popover, Heading, Alert). 391 tests, all pass. Build verified.                                                                                                                                                                                          |
+| 2026-02-27 | 6     | Docs (TOKENS.md, PATTERNS.md), CHANGELOG.md, version bump to 0.1.0.                                                                                                                                                                                                                     |
+| 2026-02-27 | 7a-7b | npm publish setup (package.json, LICENSE, README.md, CONTRIBUTING.md). CI/CD workflows (ci.yml, release.yml). All verified: 391 tests pass, build clean, pack dry-run OK.                                                                                                               |
+| 2026-02-27 | 7c    | Figma token sync complete. Primary color: purple→green (#9AD81A). 100+ CSS custom properties (light+dark). New tokens: radii (10 values), typography (9xl, 9 weights, letter-spacing), layout (control heights, containers, icons, avatars). All 29 components updated. 391 tests pass. |

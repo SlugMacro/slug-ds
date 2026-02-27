@@ -90,15 +90,11 @@ Several components use the compound pattern for flexible composition.
 <Accordion type="single" collapsible>
   <Accordion.Item value="faq-1">
     <Accordion.Trigger>What is slug-ds?</Accordion.Trigger>
-    <Accordion.Content>
-      A production-grade React design system.
-    </Accordion.Content>
+    <Accordion.Content>A production-grade React design system.</Accordion.Content>
   </Accordion.Item>
   <Accordion.Item value="faq-2">
     <Accordion.Trigger>Is it accessible?</Accordion.Trigger>
-    <Accordion.Content>
-      Yes. All components meet WCAG 2.1 AA.
-    </Accordion.Content>
+    <Accordion.Content>Yes. All components meet WCAG 2.1 AA.</Accordion.Content>
   </Accordion.Item>
 </Accordion>
 ```
@@ -144,7 +140,9 @@ Several components use the compound pattern for flexible composition.
   <Avatar src="/avatar.jpg" alt="User" size="sm" />
   <Stack gap={0.5}>
     <Text weight="medium">John Doe</Text>
-    <Text size="sm" color="muted">john@example.com</Text>
+    <Text size="sm" color="muted">
+      john@example.com
+    </Text>
   </Stack>
 </Stack>
 ```
@@ -174,7 +172,9 @@ Several components use the compound pattern for flexible composition.
   <Textarea label="Bio" placeholder="Tell us about yourself" fullWidth />
   <Stack direction="horizontal" gap={3}>
     <Button type="submit">Save</Button>
-    <Button intent="ghost" type="button">Cancel</Button>
+    <Button intent="ghost" type="button">
+      Cancel
+    </Button>
   </Stack>
 </Stack>
 ```
@@ -182,29 +182,28 @@ Several components use the compound pattern for flexible composition.
 ### Form with Validation
 
 ```tsx
-<Input
-  label="Email"
-  type="email"
-  error="Please enter a valid email address"
-  fullWidth
-/>
+<Input label="Email" type="email" error="Please enter a valid email address" fullWidth />
 ```
 
 ### Checkbox and Radio Groups
 
 ```tsx
-{/* Checkbox */}
+{
+  /* Checkbox */
+}
 <Stack gap={2}>
   <Checkbox id="terms" label="Accept terms and conditions" />
   <Checkbox id="newsletter" label="Subscribe to newsletter" />
-</Stack>
+</Stack>;
 
-{/* Radio */}
+{
+  /* Radio */
+}
 <Radio type="single" defaultValue="option-1">
   <Radio.Item value="option-1" label="Option 1" />
   <Radio.Item value="option-2" label="Option 2" />
   <Radio.Item value="option-3" label="Option 3" />
-</Radio>
+</Radio>;
 ```
 
 ### Select Dropdown
@@ -323,30 +322,29 @@ function ThemeToggle() {
   const toggle = () => {
     const next = !dark;
     setDark(next);
-    document.documentElement.setAttribute(
-      "data-theme",
-      next ? "dark" : "light"
-    );
+    document.documentElement.setAttribute("data-theme", next ? "dark" : "light");
   };
 
-  return (
-    <Switch checked={dark} onCheckedChange={toggle} label="Dark mode" />
-  );
+  return <Switch checked={dark} onCheckedChange={toggle} label="Dark mode" />;
 }
 ```
 
 ### Scoped Theming
 
 ```tsx
-{/* Light section */}
+{
+  /* Light section */
+}
 <div data-theme="light">
   <Card>Light card</Card>
-</div>
+</div>;
 
-{/* Dark section on same page */}
+{
+  /* Dark section on same page */
+}
 <div data-theme="dark">
   <Card>Dark card</Card>
-</div>
+</div>;
 ```
 
 ---
@@ -356,16 +354,20 @@ function ThemeToggle() {
 All components accept `className` for custom styling. Classes are merged using `cn()` (clsx + tailwind-merge), so Tailwind conflicts are resolved automatically.
 
 ```tsx
-{/* Override padding */}
-<Card className="p-8">More padding</Card>
+{
+  /* Override padding */
+}
+<Card className="p-8">More padding</Card>;
 
-{/* Override width */}
-<Button className="w-full">Full width button</Button>
+{
+  /* Override width */
+}
+<Button className="w-full">Full width button</Button>;
 
-{/* Responsive overrides */}
-<Stack className="flex-col md:flex-row">
-  Responsive direction
-</Stack>
+{
+  /* Responsive overrides */
+}
+<Stack className="flex-col md:flex-row">Responsive direction</Stack>;
 ```
 
 ---

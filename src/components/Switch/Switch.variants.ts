@@ -1,7 +1,7 @@
 import { cva } from "class-variance-authority";
 
 export const switchVariants = cva(
-  "inline-flex shrink-0 cursor-pointer items-center rounded-full border-2 border-transparent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-primary focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-accent-primary data-[state=unchecked]:bg-border-default",
+  "inline-flex shrink-0 cursor-pointer items-center rounded-full border-2 border-transparent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring-primary focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-bg-neutral data-[state=unchecked]:bg-bg-neutral-subtle",
   {
     variants: {
       size: {
@@ -17,7 +17,7 @@ export const switchVariants = cva(
 );
 
 export const switchThumbVariants = cva(
-  "pointer-events-none block rounded-full bg-fg-on-accent shadow-sm transition-transform data-[state=unchecked]:translate-x-0",
+  "pointer-events-none block rounded-full bg-bg-canvas shadow-sm transition-transform data-[state=unchecked]:translate-x-0",
   {
     variants: {
       size: {

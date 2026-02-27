@@ -1,7 +1,7 @@
 import { cva } from "class-variance-authority";
 
 export const checkboxVariants = cva(
-  "shrink-0 border border-border-default rounded bg-bg-base transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-primary focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-accent-primary data-[state=checked]:border-accent-primary data-[state=checked]:text-fg-on-accent data-[state=indeterminate]:bg-accent-primary data-[state=indeterminate]:border-accent-primary data-[state=indeterminate]:text-fg-on-accent",
+  "shrink-0 border border-border-default rounded bg-bg-canvas transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring-primary focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-bg-neutral data-[state=checked]:border-bg-neutral data-[state=checked]:text-fg-inverse data-[state=indeterminate]:bg-bg-neutral data-[state=indeterminate]:border-bg-neutral data-[state=indeterminate]:text-fg-inverse",
   {
     variants: {
       size: {
@@ -10,7 +10,7 @@ export const checkboxVariants = cva(
         lg: "h-6 w-6",
       },
       error: {
-        true: "border-error data-[state=checked]:bg-error data-[state=checked]:border-error data-[state=indeterminate]:bg-error data-[state=indeterminate]:border-error",
+        true: "border-border-danger data-[state=checked]:bg-bg-danger data-[state=checked]:border-border-danger data-[state=indeterminate]:bg-bg-danger data-[state=indeterminate]:border-border-danger",
         false: "",
       },
     },

@@ -15,7 +15,7 @@ import {
 
 const ChevronIcon = () => (
   <svg
-    className="h-4 w-4 shrink-0 text-fg-muted transition-transform duration-200"
+    className="h-4 w-4 shrink-0 text-fg-tertiary transition-transform duration-200"
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
     viewBox="0 0 24 24"

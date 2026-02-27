@@ -99,7 +99,7 @@ function ControlledTabs() {
           Go to Settings
         </Button>
       </div>
-      <p className="text-sm text-fg-muted">
+      <p className="text-sm text-fg-tertiary">
         Active tab: <strong className="text-fg-primary">{value}</strong>
       </p>
       <Tabs value={value} onValueChange={setValue}>

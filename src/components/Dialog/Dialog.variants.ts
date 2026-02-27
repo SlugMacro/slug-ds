@@ -1,11 +1,11 @@
 import { cva } from "class-variance-authority";
 
 export const dialogOverlayVariants = cva(
-  "fixed inset-0 z-50 bg-bg-overlay data-[state=open]:animate-overlay-in data-[state=closed]:animate-overlay-out",
+  "fixed inset-0 z-50 bg-bg-backdrop data-[state=open]:animate-overlay-in data-[state=closed]:animate-overlay-out",
 );
 
 export const dialogContentVariants = cva(
-  "fixed left-1/2 top-1/2 z-50 -translate-x-1/2 -translate-y-1/2 bg-bg-base border border-border-default rounded-xl shadow-xl focus-visible:outline-none data-[state=open]:animate-content-in data-[state=closed]:animate-content-out",
+  "fixed left-1/2 top-1/2 z-50 -translate-x-1/2 -translate-y-1/2 bg-bg-canvas border border-border-default rounded-xl shadow-xl focus-visible:outline-none data-[state=open]:animate-content-in data-[state=closed]:animate-content-out",
   {
     variants: {
       size: {

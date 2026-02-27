@@ -29,7 +29,7 @@ export const AllSizes: Story = {
     <div className="space-y-6">
       {(["sm", "md", "lg", "xl", "full"] as const).map((size) => (
         <div key={size}>
-          <p className="text-sm text-fg-muted mb-2">size=&quot;{size}&quot;</p>
+          <p className="text-sm text-fg-tertiary mb-2">size=&quot;{size}&quot;</p>
           <Container size={size} className="border border-dashed border-border-default">
             <Placeholder />
           </Container>
@@ -51,7 +51,7 @@ export const Nested: Story = {
   render: () => (
     <Container size="xl">
       <div className="space-y-4">
-        <p className="text-sm text-fg-muted">Outer container (xl), inner container (sm)</p>
+        <p className="text-sm text-fg-tertiary">Outer container (xl), inner container (sm)</p>
         <Container size="sm" className="border border-dashed border-border-default">
           <Placeholder />
         </Container>

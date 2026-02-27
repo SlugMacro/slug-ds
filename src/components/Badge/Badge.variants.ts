@@ -23,17 +23,21 @@ export const badgeVariants = cva(
     },
     compoundVariants: [
       // Solid variants
-      { variant: "solid", color: "default", className: "bg-fg-muted/20 text-fg-primary" },
-      { variant: "solid", color: "accent", className: "bg-accent-primary text-fg-on-accent" },
-      { variant: "solid", color: "success", className: "bg-success text-fg-on-accent" },
-      { variant: "solid", color: "warning", className: "bg-warning text-fg-on-accent" },
-      { variant: "solid", color: "error", className: "bg-error text-fg-on-accent" },
+      { variant: "solid", color: "default", className: "bg-bg-neutral-subtle text-fg-primary" },
+      { variant: "solid", color: "accent", className: "bg-bg-primary text-fg-on-dark" },
+      { variant: "solid", color: "success", className: "bg-bg-success text-fg-on-dark" },
+      { variant: "solid", color: "warning", className: "bg-bg-warning text-fg-on-dark" },
+      { variant: "solid", color: "error", className: "bg-bg-danger text-fg-on-dark" },
       // Subtle variants
-      { variant: "subtle", color: "default", className: "bg-fg-muted/10 text-fg-secondary" },
-      { variant: "subtle", color: "accent", className: "bg-accent-primary/10 text-accent-primary" },
-      { variant: "subtle", color: "success", className: "bg-success/10 text-success" },
-      { variant: "subtle", color: "warning", className: "bg-warning/10 text-warning" },
-      { variant: "subtle", color: "error", className: "bg-error/10 text-error" },
+      {
+        variant: "subtle",
+        color: "default",
+        className: "bg-bg-neutral-muted-hover text-fg-secondary",
+      },
+      { variant: "subtle", color: "accent", className: "bg-bg-primary-subtle text-fg-interactive" },
+      { variant: "subtle", color: "success", className: "bg-bg-success-subtle text-fg-success" },
+      { variant: "subtle", color: "warning", className: "bg-bg-warning-subtle text-fg-warning" },
+      { variant: "subtle", color: "error", className: "bg-bg-danger-subtle text-fg-danger" },
       // Outline variants
       {
         variant: "outline",
@@ -43,11 +47,11 @@ export const badgeVariants = cva(
       {
         variant: "outline",
         color: "accent",
-        className: "border-accent-primary text-accent-primary",
+        className: "border-border-primary text-fg-interactive",
       },
-      { variant: "outline", color: "success", className: "border-success text-success" },
-      { variant: "outline", color: "warning", className: "border-warning text-warning" },
-      { variant: "outline", color: "error", className: "border-error text-error" },
+      { variant: "outline", color: "success", className: "border-border-success text-fg-success" },
+      { variant: "outline", color: "warning", className: "border-border-warning text-fg-warning" },
+      { variant: "outline", color: "error", className: "border-border-danger text-fg-danger" },
     ],
     defaultVariants: {
       variant: "subtle",

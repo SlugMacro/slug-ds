@@ -31,9 +31,9 @@ describe("Spinner", () => {
     });
 
     it("merges custom className", () => {
-      const { container } = render(<Spinner className="text-error" />);
+      const { container } = render(<Spinner className="text-fg-danger" />);
       const svg = container.querySelector("svg");
-      expect(svg?.getAttribute("class")).toContain("text-error");
+      expect(svg?.getAttribute("class")).toContain("text-fg-danger");
       expect(svg?.getAttribute("class")).toContain("animate-spin");
     });
   });

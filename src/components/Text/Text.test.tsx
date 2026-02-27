@@ -47,7 +47,7 @@ describe("Text", () => {
 
     it("applies color classes", () => {
       render(<Text color="error">Error</Text>);
-      expect(screen.getByText("Error").className).toContain("text-error");
+      expect(screen.getByText("Error").className).toContain("text-fg-danger");
     });
 
     it("applies truncate class", () => {

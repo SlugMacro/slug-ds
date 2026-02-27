@@ -54,7 +54,7 @@ const DialogContent = forwardRef<HTMLDivElement, DialogContentProps>(
           {children}
           {showClose && (
             <RadixDialog.Close
-              className="absolute right-4 top-4 rounded-sm text-fg-muted hover:text-fg-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-primary focus-visible:ring-offset-2"
+              className="absolute right-4 top-4 rounded-sm text-fg-tertiary hover:text-fg-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring-primary focus-visible:ring-offset-2"
               aria-label="Close"
             >
               <CloseIcon />

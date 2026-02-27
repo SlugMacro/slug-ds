@@ -5,48 +5,142 @@
 
 /* ======================================
    Design Tokens — Light Theme (default)
+   Synced from Figma variables (2026-02-27)
    ====================================== */
 @theme {
-  /* Foreground */
-  --color-fg-primary: #111827;
-  --color-fg-secondary: #6b7280;
-  --color-fg-muted: #9ca3af;
-  --color-fg-on-accent: #ffffff;
+  /* === Background / Base === */
+  --color-bg-canvas: #ffffff;
+  --color-bg-surface: #fafafa;
+  --color-bg-elevated: #f0f0f0;
+  --color-bg-sunken: #f0f0f0;
+  --color-bg-inverse: #000000;
+  --color-bg-disabled: rgb(135 135 135 / 0.2);
+  --color-bg-backdrop: rgb(0 0 0 / 0.4);
+  --color-bg-floating: #ffffff;
 
-  /* Background */
-  --color-bg-base: #ffffff;
-  --color-bg-surface: #f9fafb;
-  --color-bg-surface-hover: #f3f4f6;
+  /* === Background / Semantic / Primary === */
+  --color-bg-primary: #9ad81a;
+  --color-bg-primary-hover: #7fc000;
+  --color-bg-primary-active: #669a03;
+  --color-bg-primary-subtle: rgb(154 216 26 / 0.1);
+  --color-bg-primary-subtle-hover: rgb(154 216 26 / 0.2);
+  --color-bg-primary-subtle-active: rgb(154 216 26 / 0.3);
 
-  /* Border */
-  --color-border-default: #e5e7eb;
+  /* === Background / Semantic / Neutral === */
+  --color-bg-neutral: #0a0a0a;
+  --color-bg-neutral-hover: #1e1e1e;
+  --color-bg-neutral-active: #373737;
+  --color-bg-neutral-subtle: rgb(135 135 135 / 0.2);
+  --color-bg-neutral-subtle-hover: rgb(135 135 135 / 0.3);
+  --color-bg-neutral-subtle-active: rgb(135 135 135 / 0.4);
+  --color-bg-neutral-muted: rgb(135 135 135 / 0.05);
+  --color-bg-neutral-muted-hover: rgb(135 135 135 / 0.1);
+  --color-bg-neutral-muted-active: rgb(135 135 135 / 0.2);
 
-  /* Accent */
-  --color-accent-primary: #7c3aed;
-  --color-accent-primary-hover: #6d28d9;
+  /* === Background / Semantic / Success === */
+  --color-bg-success: #10b981;
+  --color-bg-success-hover: #059669;
+  --color-bg-success-active: #047857;
+  --color-bg-success-subtle: rgb(16 185 129 / 0.1);
+  --color-bg-success-subtle-hover: rgb(16 185 129 / 0.2);
+  --color-bg-success-subtle-active: rgb(16 185 129 / 0.3);
 
-  /* Semantic */
-  --color-error: #ef4444;
-  --color-error-hover: #dc2626;
-  --color-success: #22c55e;
-  --color-warning: #f59e0b;
-  --color-info: #3b82f6;
+  /* === Background / Semantic / Danger === */
+  --color-bg-danger: #ef4444;
+  --color-bg-danger-hover: #dc2626;
+  --color-bg-danger-active: #b91c1c;
+  --color-bg-danger-subtle: rgb(239 68 68 / 0.1);
+  --color-bg-danger-subtle-hover: rgb(239 68 68 / 0.2);
+  --color-bg-danger-subtle-active: rgb(239 68 68 / 0.3);
 
-  /* Overlay */
-  --color-bg-overlay: rgb(0 0 0 / 0.5);
+  /* === Background / Semantic / Warning === */
+  --color-bg-warning: #f59e0b;
+  --color-bg-warning-hover: #d97706;
+  --color-bg-warning-active: #b45309;
+  --color-bg-warning-subtle: rgb(245 158 11 / 0.1);
+  --color-bg-warning-subtle-hover: rgb(245 158 11 / 0.2);
+  --color-bg-warning-subtle-active: rgb(245 158 11 / 0.3);
 
-  /* Typography */
+  /* === Background / Semantic / Info === */
+  --color-bg-info: #0ea5e9;
+  --color-bg-info-hover: #0284c7;
+  --color-bg-info-active: #0369a1;
+  --color-bg-info-subtle: rgb(14 165 233 / 0.1);
+  --color-bg-info-subtle-hover: rgb(14 165 233 / 0.2);
+  --color-bg-info-subtle-active: rgb(14 165 233 / 0.2);
+
+  /* === Foreground / Content === */
+  --color-fg-primary: #0a0a0a;
+  --color-fg-secondary: #696969;
+  --color-fg-tertiary: #aaaaaa;
+  --color-fg-inverse: #ffffff;
+  --color-fg-disabled: #cdcdcd;
+
+  /* === Foreground / UI === */
+  --color-fg-placeholder: #aaaaaa;
+  --color-fg-helper: #878787;
+  --color-fg-label: #373737;
+
+  /* === Foreground / Interactive === */
+  --color-fg-interactive: #669a03;
+  --color-fg-interactive-hover: #4e7206;
+  --color-fg-interactive-active: #345006;
+
+  /* === Foreground / Status === */
+  --color-fg-success: #047857;
+  --color-fg-danger: #b91c1c;
+  --color-fg-warning: #b45309;
+  --color-fg-info: #0369a1;
+
+  /* === Foreground / On === */
+  --color-fg-on-dark: #ffffff;
+  --color-fg-on-light: #0a0a0a;
+
+  /* === Border / Base === */
+  --color-border-subtle: #e1e1e1;
+  --color-border-default: #cdcdcd;
+  --color-border-strong: #aaaaaa;
+  --color-border-disabled: rgb(135 135 135 / 0.1);
+  --color-border-inverse: #373737;
+
+  /* === Border / Semantic === */
+  --color-border-primary: #669a03;
+  --color-border-primary-subtle: rgb(154 216 26 / 0.2);
+  --color-border-neutral-subtle: rgb(135 135 135 / 0.2);
+  --color-border-success: #10b981;
+  --color-border-success-subtle: rgb(16 185 129 / 0.2);
+  --color-border-danger: #ef4444;
+  --color-border-danger-subtle: rgb(239 68 68 / 0.2);
+  --color-border-warning: #f59e0b;
+  --color-border-warning-subtle: rgb(245 158 11 / 0.2);
+  --color-border-info: #0ea5e9;
+  --color-border-info-subtle: rgb(14 165 233 / 0.2);
+
+  /* === Ring / Focus === */
+  --color-ring-primary: #9ad81a;
+  --color-ring-neutral: #0a0a0a;
+  --color-ring-success: #10b981;
+  --color-ring-danger: #ef4444;
+  --color-ring-warning: #f59e0b;
+  --color-ring-info: #0ea5e9;
+
+  /* === Border Radius === */
+  --radius-none: 0px;
+  --radius-2xs: 2px;
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 10px;
+  --radius-xl: 12px;
+  --radius-2xl: 16px;
+  --radius-3xl: 24px;
+  --radius-full: 9999px;
+
+  /* === Typography === */
   --font-sans: "Geist", ui-sans-serif, system-ui, sans-serif;
   --font-mono: "Geist Mono", ui-monospace, monospace;
 
-  /* Border Radius */
-  --radius-sm: 0.25rem;
-  --radius-md: 0.375rem;
-  --radius-lg: 0.5rem;
-  --radius-xl: 0.75rem;
-  --radius-full: 9999px;
-
-  /* Shadows */
+  /* === Shadows === */
   --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
@@ -58,28 +152,123 @@
    ====================================== */
 @layer theme {
   [data-theme="dark"] {
-    --color-fg-primary: #f9fafb;
-    --color-fg-secondary: #9ca3af;
-    --color-fg-muted: #6b7280;
-    --color-fg-on-accent: #ffffff;
+    /* Background / Base */
+    --color-bg-canvas: #000000;
+    --color-bg-surface: #0a0a0a;
+    --color-bg-elevated: #1e1e1e;
+    --color-bg-sunken: #0a0a0a;
+    --color-bg-inverse: #ffffff;
+    --color-bg-disabled: rgb(135 135 135 / 0.2);
+    --color-bg-backdrop: rgb(0 0 0 / 0.6);
+    --color-bg-floating: #373737;
 
-    --color-bg-base: #111827;
-    --color-bg-surface: #1f2937;
-    --color-bg-surface-hover: #374151;
+    /* Background / Semantic / Primary */
+    --color-bg-primary: #9ad81a;
+    --color-bg-primary-hover: #7fc000;
+    --color-bg-primary-active: #669a03;
+    --color-bg-primary-subtle: rgb(154 216 26 / 0.2);
+    --color-bg-primary-subtle-hover: rgb(154 216 26 / 0.3);
+    --color-bg-primary-subtle-active: rgb(154 216 26 / 0.4);
 
-    --color-border-default: #374151;
+    /* Background / Semantic / Neutral */
+    --color-bg-neutral: #ffffff;
+    --color-bg-neutral-hover: #f0f0f0;
+    --color-bg-neutral-active: #e1e1e1;
+    --color-bg-neutral-subtle: rgb(135 135 135 / 0.3);
+    --color-bg-neutral-subtle-hover: rgb(135 135 135 / 0.4);
+    --color-bg-neutral-subtle-active: rgb(135 135 135 / 0.5);
+    --color-bg-neutral-muted: rgb(135 135 135 / 0.1);
+    --color-bg-neutral-muted-hover: rgb(135 135 135 / 0.2);
+    --color-bg-neutral-muted-active: rgb(135 135 135 / 0.3);
 
-    --color-accent-primary: #a78bfa;
-    --color-accent-primary-hover: #8b5cf6;
+    /* Background / Semantic / Success */
+    --color-bg-success: #10b981;
+    --color-bg-success-hover: #059669;
+    --color-bg-success-active: #047857;
+    --color-bg-success-subtle: rgb(16 185 129 / 0.2);
+    --color-bg-success-subtle-hover: rgb(16 185 129 / 0.3);
+    --color-bg-success-subtle-active: rgb(16 185 129 / 0.4);
 
-    --color-error: #f87171;
-    --color-error-hover: #ef4444;
-    --color-success: #4ade80;
-    --color-warning: #fbbf24;
-    --color-info: #60a5fa;
+    /* Background / Semantic / Danger */
+    --color-bg-danger: #ef4444;
+    --color-bg-danger-hover: #dc2626;
+    --color-bg-danger-active: #b91c1c;
+    --color-bg-danger-subtle: rgb(239 68 68 / 0.2);
+    --color-bg-danger-subtle-hover: rgb(239 68 68 / 0.3);
+    --color-bg-danger-subtle-active: rgb(239 68 68 / 0.4);
 
-    --color-bg-overlay: rgb(0 0 0 / 0.7);
+    /* Background / Semantic / Warning */
+    --color-bg-warning: #f59e0b;
+    --color-bg-warning-hover: #d97706;
+    --color-bg-warning-active: #b45309;
+    --color-bg-warning-subtle: rgb(245 158 11 / 0.2);
+    --color-bg-warning-subtle-hover: rgb(245 158 11 / 0.3);
+    --color-bg-warning-subtle-active: rgb(245 158 11 / 0.4);
 
+    /* Background / Semantic / Info */
+    --color-bg-info: #0ea5e9;
+    --color-bg-info-hover: #0284c7;
+    --color-bg-info-active: #0369a1;
+    --color-bg-info-subtle: rgb(14 165 233 / 0.2);
+    --color-bg-info-subtle-hover: rgb(14 165 233 / 0.3);
+    --color-bg-info-subtle-active: rgb(14 165 233 / 0.4);
+
+    /* Foreground / Content */
+    --color-fg-primary: #fafafa;
+    --color-fg-secondary: #aaaaaa;
+    --color-fg-tertiary: #696969;
+    --color-fg-inverse: #0a0a0a;
+    --color-fg-disabled: #505050;
+
+    /* Foreground / UI */
+    --color-fg-placeholder: #696969;
+    --color-fg-helper: #878787;
+    --color-fg-label: #e1e1e1;
+
+    /* Foreground / Interactive */
+    --color-fg-interactive: #bcec54;
+    --color-fg-interactive-hover: #d1f189;
+    --color-fg-interactive-active: #e2f5b8;
+
+    /* Foreground / Status */
+    --color-fg-success: #34d399;
+    --color-fg-danger: #f87171;
+    --color-fg-warning: #fbbf24;
+    --color-fg-info: #38bdf8;
+
+    /* Foreground / On */
+    --color-fg-on-dark: #ffffff;
+    --color-fg-on-light: #0a0a0a;
+
+    /* Border / Base */
+    --color-border-subtle: #373737;
+    --color-border-default: #505050;
+    --color-border-strong: #aaaaaa;
+    --color-border-disabled: rgb(135 135 135 / 0.2);
+    --color-border-inverse: #e1e1e1;
+
+    /* Border / Semantic */
+    --color-border-primary: #bcec54;
+    --color-border-primary-subtle: rgb(154 216 26 / 0.2);
+    --color-border-neutral-subtle: rgb(135 135 135 / 0.2);
+    --color-border-success: #10b981;
+    --color-border-success-subtle: rgb(16 185 129 / 0.2);
+    --color-border-danger: #ef4444;
+    --color-border-danger-subtle: rgb(239 68 68 / 0.2);
+    --color-border-warning: #f59e0b;
+    --color-border-warning-subtle: rgb(245 158 11 / 0.2);
+    --color-border-info: #0ea5e9;
+    --color-border-info-subtle: rgb(14 165 233 / 0.2);
+
+    /* Ring / Focus */
+    --color-ring-primary: #9ad81a;
+    --color-ring-neutral: #ffffff;
+    --color-ring-success: #10b981;
+    --color-ring-danger: #ef4444;
+    --color-ring-warning: #f59e0b;
+    --color-ring-info: #0ea5e9;
+
+    /* Shadows */
     --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.3);
     --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.4), 0 2px 4px -2px rgb(0 0 0 / 0.3);
     --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.4), 0 4px 6px -4px rgb(0 0 0 / 0.3);

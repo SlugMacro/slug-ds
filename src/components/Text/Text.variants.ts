@@ -25,10 +25,10 @@ export const textVariants = cva("", {
     color: {
       primary: "text-fg-primary",
       secondary: "text-fg-secondary",
-      muted: "text-fg-muted",
-      accent: "text-accent-primary",
-      error: "text-error",
-      success: "text-success",
+      muted: "text-fg-tertiary",
+      accent: "text-fg-interactive",
+      error: "text-fg-danger",
+      success: "text-fg-success",
     },
     truncate: {
       true: "truncate",

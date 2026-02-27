@@ -57,7 +57,10 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
           )}
         </div>
         {hasDescription && (
-          <p id={descriptionId} className={cn("text-sm", error ? "text-error" : "text-fg-muted")}>
+          <p
+            id={descriptionId}
+            className={cn("text-sm", error ? "text-fg-danger" : "text-fg-tertiary")}
+          >
             {error ? errorMessage : helperText}
           </p>
         )}

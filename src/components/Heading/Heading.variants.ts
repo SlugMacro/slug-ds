@@ -19,8 +19,8 @@ export const headingVariants = cva("", {
     color: {
       primary: "text-fg-primary",
       secondary: "text-fg-secondary",
-      muted: "text-fg-muted",
-      accent: "text-accent-primary",
+      muted: "text-fg-tertiary",
+      accent: "text-fg-interactive",
     },
     truncate: {
       true: "truncate",

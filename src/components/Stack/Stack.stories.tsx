@@ -59,18 +59,21 @@ export const Wrapped: Story = {
 export const AsNav: Story = {
   render: () => (
     <Stack as="nav" aria-label="Sidebar" gap={1}>
-      <a href="#" className="px-3 py-2 rounded-md bg-bg-surface-hover text-fg-primary text-sm">
+      <a
+        href="#"
+        className="px-3 py-2 rounded-md bg-bg-neutral-muted-hover text-fg-primary text-sm"
+      >
         Dashboard
       </a>
       <a
         href="#"
-        className="px-3 py-2 rounded-md text-fg-secondary text-sm hover:bg-bg-surface-hover"
+        className="px-3 py-2 rounded-md text-fg-secondary text-sm hover:bg-bg-neutral-muted-hover"
       >
         Settings
       </a>
       <a
         href="#"
-        className="px-3 py-2 rounded-md text-fg-secondary text-sm hover:bg-bg-surface-hover"
+        className="px-3 py-2 rounded-md text-fg-secondary text-sm hover:bg-bg-neutral-muted-hover"
       >
         Profile
       </a>

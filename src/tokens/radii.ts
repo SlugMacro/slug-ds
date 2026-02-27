@@ -1,7 +1,13 @@
+/** Border radius scale synced from Figma. */
 export const radii = {
-  sm: "0.25rem",
-  md: "0.375rem",
-  lg: "0.5rem",
-  xl: "0.75rem",
+  none: "0px",
+  "2xs": "2px",
+  xs: "4px",
+  sm: "6px",
+  md: "8px",
+  lg: "10px",
+  xl: "12px",
+  "2xl": "16px",
+  "3xl": "24px",
   full: "9999px",
 } as const;

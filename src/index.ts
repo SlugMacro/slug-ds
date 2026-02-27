@@ -140,9 +140,25 @@ export type { PolymorphicProps, PolymorphicPropsWithRef, PolymorphicRef } from "
 export type { SpacingScale } from "./types";
 
 // Tokens
-export { colors, lightTheme, darkTheme } from "./tokens/colors";
+export { colors, lightTheme, darkTheme, palette } from "./tokens/colors";
 export { spacing } from "./tokens/spacing";
-export { fontFamily, fontSize, fontWeight, lineHeight } from "./tokens/typography";
+export {
+  fontFamily,
+  fontSize,
+  fontWeight,
+  lineHeight,
+  lineHeightPx,
+  letterSpacing,
+} from "./tokens/typography";
 export { shadows } from "./tokens/shadows";
 export { radii } from "./tokens/radii";
 export { breakpoints } from "./tokens/breakpoints";
+export {
+  controlHeight,
+  container,
+  modalWidth,
+  iconSize,
+  avatarSize,
+  strokeWidth,
+  gutter,
+} from "./tokens/layout";

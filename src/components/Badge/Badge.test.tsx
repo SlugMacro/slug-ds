@@ -25,8 +25,8 @@ describe("Badge", () => {
         </Badge>,
       );
       const el = screen.getByText("Solid");
-      expect(el.className).toContain("bg-accent-primary");
-      expect(el.className).toContain("text-fg-on-accent");
+      expect(el.className).toContain("bg-bg-primary");
+      expect(el.className).toContain("text-fg-on-dark");
     });
 
     it("applies subtle variant classes", () => {
@@ -36,7 +36,7 @@ describe("Badge", () => {
         </Badge>,
       );
       const el = screen.getByText("Subtle");
-      expect(el.className).toContain("text-success");
+      expect(el.className).toContain("text-fg-success");
     });
 
     it("applies outline variant classes", () => {
@@ -46,8 +46,8 @@ describe("Badge", () => {
         </Badge>,
       );
       const el = screen.getByText("Outline");
-      expect(el.className).toContain("border-error");
-      expect(el.className).toContain("text-error");
+      expect(el.className).toContain("border-border-danger");
+      expect(el.className).toContain("text-fg-danger");
     });
 
     it("applies size sm", () => {
