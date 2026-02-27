@@ -2,6 +2,7 @@ import type { Preview } from "@storybook/react-vite";
 import "@fontsource/geist-sans/latin.css";
 import "@fontsource/geist-mono/latin.css";
 import "../src/styles.css";
+import "./preview.css";
 import { TooltipProvider } from "../src/components/Tooltip";
 import { Toaster } from "../src/components/Toast";
 import theme from "./theme";

@@ -1,0 +1,5 @@
+/* Storybook docs — story preview blocks */
+.sbdocs.sbdocs-preview {
+  border-color: var(--color-border-subtle);
+  border-radius: var(--radius-md);
+}
