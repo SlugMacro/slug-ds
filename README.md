@@ -58,7 +58,7 @@ slug-ds uses CSS custom properties for theming. Toggle dark mode by setting `dat
 
 ## Documentation
 
-- [Storybook](https://github.com/SlugMacro/slug-ds) — Interactive component explorer
+- [Storybook](https://slugmacro.github.io/slug-ds/) — Interactive component explorer
 - [Architecture](./ARCHITECTURE.md) — System design and token flow
 - [Contributing](./CONTRIBUTING.md) — How to add and modify components
 

@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
+import { AddLine, ArrowRightLine } from "@mingcute/react";
 import { Button } from "./Button";
 
 const meta: Meta<typeof Button> = {
@@ -8,12 +9,18 @@ const meta: Meta<typeof Button> = {
   argTypes: {
     intent: {
       control: "select",
-      options: ["primary", "secondary", "ghost", "danger"],
+      options: ["primary", "neutral", "success", "danger"],
     },
-    size: { control: "select", options: ["sm", "md", "lg"] },
+    variant: {
+      control: "select",
+      options: ["solid", "subtle", "outline", "ghost"],
+    },
+    size: { control: "select", options: ["xs", "sm", "md", "lg"] },
     loading: { control: "boolean" },
     disabled: { control: "boolean" },
     fullWidth: { control: "boolean" },
+    leftIcon: { table: { disable: true } },
+    rightIcon: { table: { disable: true } },
   },
 };
 
@@ -28,9 +35,89 @@ export const AllIntents: Story = {
   render: () => (
     <div className="flex items-center gap-3">
       <Button intent="primary">Primary</Button>
-      <Button intent="secondary">Secondary</Button>
-      <Button intent="ghost">Ghost</Button>
+      <Button intent="neutral">Neutral</Button>
+      <Button intent="success">Success</Button>
       <Button intent="danger">Danger</Button>
+    </div>
+  ),
+};
+
+export const AllVariants: Story = {
+  render: () => (
+    <div className="flex items-center gap-3">
+      <Button variant="solid">Solid</Button>
+      <Button variant="subtle">Subtle</Button>
+      <Button variant="outline">Outline</Button>
+      <Button variant="ghost">Ghost</Button>
+    </div>
+  ),
+};
+
+export const IntentMatrix: Story = {
+  name: "Intent × Variant Matrix",
+  render: () => (
+    <div className="grid grid-cols-5 gap-3 items-center">
+      <div />
+      <p className="text-fg-secondary text-sm font-medium">Solid</p>
+      <p className="text-fg-secondary text-sm font-medium">Subtle</p>
+      <p className="text-fg-secondary text-sm font-medium">Outline</p>
+      <p className="text-fg-secondary text-sm font-medium">Ghost</p>
+
+      <p className="text-fg-secondary text-sm font-medium">Primary</p>
+      <Button intent="primary" variant="solid">
+        Button
+      </Button>
+      <Button intent="primary" variant="subtle">
+        Button
+      </Button>
+      <Button intent="primary" variant="outline">
+        Button
+      </Button>
+      <Button intent="primary" variant="ghost">
+        Button
+      </Button>
+
+      <p className="text-fg-secondary text-sm font-medium">Neutral</p>
+      <Button intent="neutral" variant="solid">
+        Button
+      </Button>
+      <Button intent="neutral" variant="subtle">
+        Button
+      </Button>
+      <Button intent="neutral" variant="outline">
+        Button
+      </Button>
+      <Button intent="neutral" variant="ghost">
+        Button
+      </Button>
+
+      <p className="text-fg-secondary text-sm font-medium">Success</p>
+      <Button intent="success" variant="solid">
+        Button
+      </Button>
+      <Button intent="success" variant="subtle">
+        Button
+      </Button>
+      <Button intent="success" variant="outline">
+        Button
+      </Button>
+      <Button intent="success" variant="ghost">
+        Button
+      </Button>
+
+      <p className="text-fg-secondary text-sm font-medium">Danger</p>
+      <Button intent="danger" variant="solid">
+        Button
+      </Button>
+      <Button intent="danger" variant="subtle">
+        Button
+      </Button>
+      <Button intent="danger" variant="outline">
+        Button
+      </Button>
+      <Button intent="danger" variant="ghost">
+        Button
+      </Button>
     </div>
   ),
 };
@@ -38,6 +125,7 @@ export const AllIntents: Story = {
 export const AllSizes: Story = {
   render: () => (
     <div className="flex items-center gap-3">
+      <Button size="xs">Extra Small</Button>
       <Button size="sm">Small</Button>
       <Button size="md">Medium</Button>
       <Button size="lg">Large</Button>
@@ -51,11 +139,11 @@ export const Loading: Story = {
       <Button loading intent="primary">
         Primary
       </Button>
-      <Button loading intent="secondary">
-        Secondary
+      <Button loading intent="neutral">
+        Neutral
       </Button>
-      <Button loading intent="ghost">
-        Ghost
+      <Button loading intent="success">
+        Success
       </Button>
       <Button loading intent="danger">
         Danger
@@ -67,17 +155,17 @@ export const Loading: Story = {
 export const Disabled: Story = {
   render: () => (
     <div className="flex items-center gap-3">
-      <Button disabled intent="primary">
-        Primary
+      <Button disabled variant="solid">
+        Solid
       </Button>
-      <Button disabled intent="secondary">
-        Secondary
+      <Button disabled variant="subtle">
+        Subtle
       </Button>
-      <Button disabled intent="ghost">
+      <Button disabled variant="outline">
+        Outline
+      </Button>
+      <Button disabled variant="ghost">
         Ghost
-      </Button>
-      <Button disabled intent="danger">
-        Danger
       </Button>
     </div>
   ),
@@ -86,22 +174,8 @@ export const Disabled: Story = {
 export const WithIcons: Story = {
   render: () => (
     <div className="flex items-center gap-3">
-      <Button
-        leftIcon={
-          <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
-          </svg>
-        }
-      >
-        Add item
-      </Button>
-      <Button
-        rightIcon={
-          <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-          </svg>
-        }
-      >
+      <Button leftIcon={<AddLine />}>Add item</Button>
+      <Button variant="outline" intent="neutral" rightIcon={<ArrowRightLine />}>
         Next
       </Button>
     </div>

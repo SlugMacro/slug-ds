@@ -25,8 +25,8 @@ describe("Switch", () => {
     });
 
     it("renders all size variants", () => {
-      const sizes = ["sm", "md", "lg"] as const;
-      const sizeClasses = { sm: "h-5", md: "h-6", lg: "h-7" };
+      const sizes = ["sm", "md"] as const;
+      const sizeClasses = { sm: "h-5", md: "h-6" };
 
       for (const size of sizes) {
         const { unmount } = render(<Switch size={size} aria-label="Toggle" />);

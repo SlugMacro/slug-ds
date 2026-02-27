@@ -26,9 +26,9 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
     const hasDescription = Boolean(error ? errorMessage : helperText);
 
     return (
-      <div className={cn(inputWrapperVariants({ fullWidth }), "flex-col gap-1.5")}>
+      <div className={cn(inputWrapperVariants({ fullWidth }), "flex-col gap-2")}>
         {label && (
-          <label htmlFor={inputId} className="text-sm font-medium text-fg-primary">
+          <label htmlFor={inputId} className="text-sm font-medium text-fg-label">
             {label}
           </label>
         )}
@@ -59,7 +59,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
         {hasDescription && (
           <p
             id={descriptionId}
-            className={cn("text-sm", error ? "text-fg-danger" : "text-fg-tertiary")}
+            className={cn("text-xs", error ? "text-fg-danger" : "text-fg-helper")}
           >
             {error ? errorMessage : helperText}
           </p>

@@ -1,5 +1,6 @@
 import { forwardRef } from "react";
 import * as RadixAccordion from "@radix-ui/react-accordion";
+import { DownSmallLine } from "@mingcute/react";
 import { cn } from "@/utils/cn";
 import type {
   AccordionProps,
@@ -12,20 +13,6 @@ import {
   accordionTriggerVariants,
   accordionContentVariants,
 } from "./Accordion.variants";
-
-const ChevronIcon = () => (
-  <svg
-    className="h-4 w-4 shrink-0 text-fg-tertiary transition-transform duration-200"
-    xmlns="http://www.w3.org/2000/svg"
-    fill="none"
-    viewBox="0 0 24 24"
-    stroke="currentColor"
-    strokeWidth={2}
-    aria-hidden="true"
-  >
-    <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-  </svg>
-);
 
 function AccordionRoot(props: AccordionProps) {
   if (props.type === "multiple") {
@@ -59,7 +46,10 @@ const AccordionTrigger = forwardRef<HTMLButtonElement, AccordionTriggerProps>(
         {...rest}
       >
         {children}
-        <ChevronIcon />
+        <DownSmallLine
+          className="h-4 w-4 shrink-0 text-fg-tertiary transition-transform duration-200"
+          aria-hidden="true"
+        />
       </RadixAccordion.Trigger>
     </RadixAccordion.Header>
   ),

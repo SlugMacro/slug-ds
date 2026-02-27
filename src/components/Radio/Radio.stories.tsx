@@ -33,7 +33,7 @@ export const Horizontal: Story = {
 export const AllSizes: Story = {
   render: () => (
     <div className="space-y-6">
-      {(["sm", "md", "lg"] as const).map((size) => (
+      {(["sm", "md"] as const).map((size) => (
         <Radio key={size} label={`Size: ${size}`} defaultValue="a">
           <Radio.Item value="a" label="Option A" size={size} />
           <Radio.Item value="b" label="Option B" size={size} />

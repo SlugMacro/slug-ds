@@ -1,5 +1,6 @@
 import { forwardRef } from "react";
 import * as RadixDropdownMenu from "@radix-ui/react-dropdown-menu";
+import { CheckLine, RightSmallLine } from "@mingcute/react";
 import { cn } from "@/utils/cn";
 import type {
   DropdownMenuProps,
@@ -25,35 +26,9 @@ import {
   dropdownMenuSubTriggerVariants,
 } from "./DropdownMenu.variants";
 
-const CheckIcon = () => (
-  <svg
-    className="h-4 w-4"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth={2}
-    aria-hidden="true"
-  >
-    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-  </svg>
-);
-
 const DotIcon = () => (
   <svg className="h-2 w-2 fill-current" viewBox="0 0 8 8" aria-hidden="true">
     <circle cx="4" cy="4" r="4" />
-  </svg>
-);
-
-const ChevronRightIcon = () => (
-  <svg
-    className="ml-auto h-4 w-4"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth={2}
-    aria-hidden="true"
-  >
-    <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
   </svg>
 );
 
@@ -121,7 +96,7 @@ const DropdownMenuCheckboxItem = forwardRef<HTMLDivElement, DropdownMenuCheckbox
     >
       <span className="absolute left-2 flex h-4 w-4 items-center justify-center">
         <RadixDropdownMenu.ItemIndicator>
-          <CheckIcon />
+          <CheckLine className="h-4 w-4" aria-hidden="true" />
         </RadixDropdownMenu.ItemIndicator>
       </span>
       {children}
@@ -207,7 +182,7 @@ const DropdownMenuSubTrigger = forwardRef<HTMLDivElement, DropdownMenuSubTrigger
       {...rest}
     >
       {children}
-      <ChevronRightIcon />
+      <RightSmallLine className="ml-auto h-4 w-4" aria-hidden="true" />
     </RadixDropdownMenu.SubTrigger>
   ),
 );

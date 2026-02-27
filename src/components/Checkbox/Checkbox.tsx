@@ -1,20 +1,9 @@
 import { forwardRef, useId } from "react";
 import * as RadixCheckbox from "@radix-ui/react-checkbox";
+import { CheckLine, MinimizeLine } from "@mingcute/react";
 import { cn } from "@/utils/cn";
 import type { CheckboxProps } from "./Checkbox.types";
 import { checkboxVariants, checkboxIndicatorVariants } from "./Checkbox.variants";
-
-const CheckIcon = () => (
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={3} aria-hidden="true">
-    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-  </svg>
-);
-
-const MinusIcon = () => (
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={3} aria-hidden="true">
-    <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14" />
-  </svg>
-);
 
 export const Checkbox = forwardRef<HTMLButtonElement, CheckboxProps>(function Checkbox(
   {
@@ -47,23 +36,24 @@ export const Checkbox = forwardRef<HTMLButtonElement, CheckboxProps>(function Ch
         {...rest}
       >
         <RadixCheckbox.Indicator className={checkboxIndicatorVariants({ size })}>
-          {checked === "indeterminate" ? <MinusIcon /> : <CheckIcon />}
+          {checked === "indeterminate" ? (
+            <MinimizeLine aria-hidden="true" />
+          ) : (
+            <CheckLine aria-hidden="true" />
+          )}
         </RadixCheckbox.Indicator>
       </RadixCheckbox.Root>
       {(label || hasDescription) && (
         <div className="flex flex-col gap-0.5">
           {label && (
-            <label
-              htmlFor={checkboxId}
-              className="text-sm font-medium text-fg-primary leading-none"
-            >
+            <label htmlFor={checkboxId} className="text-sm font-medium text-fg-label leading-none">
               {label}
             </label>
           )}
           {hasDescription && (
             <p
               id={descriptionId}
-              className={cn("text-sm", error ? "text-fg-danger" : "text-fg-tertiary")}
+              className={cn("text-xs", error ? "text-fg-danger" : "text-fg-helper")}
             >
               {error ? errorMessage : description}
             </p>

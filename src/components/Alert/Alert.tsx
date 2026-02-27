@@ -1,21 +1,8 @@
 import { forwardRef } from "react";
+import { CloseLine } from "@mingcute/react";
 import { cn } from "@/utils/cn";
 import type { AlertProps, AlertTitleProps, AlertDescriptionProps } from "./Alert.types";
 import { alertVariants } from "./Alert.variants";
-
-const CloseIcon = () => (
-  <svg
-    className="h-4 w-4"
-    xmlns="http://www.w3.org/2000/svg"
-    fill="none"
-    viewBox="0 0 24 24"
-    stroke="currentColor"
-    strokeWidth={2}
-    aria-hidden="true"
-  >
-    <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-  </svg>
-);
 
 const AlertRoot = forwardRef<HTMLDivElement, AlertProps>(
   ({ intent, variant, icon, onClose, className, children, ...rest }, ref) => (
@@ -34,7 +21,7 @@ const AlertRoot = forwardRef<HTMLDivElement, AlertProps>(
           className="shrink-0 rounded-sm opacity-70 hover:opacity-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring-primary"
           aria-label="Dismiss"
         >
-          <CloseIcon />
+          <CloseLine className="h-4 w-4" aria-hidden="true" />
         </button>
       )}
     </div>

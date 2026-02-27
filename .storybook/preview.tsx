@@ -36,11 +36,11 @@ const preview: Preview = {
     },
   },
   initialGlobals: {
-    theme: "light",
+    theme: "dark",
   },
   decorators: [
     (Story, context) => {
-      const theme = (context.globals.theme as string) || "light";
+      const theme = (context.globals.theme as string) || "dark";
       return (
         <TooltipProvider delayDuration={200}>
           <div

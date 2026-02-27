@@ -13,13 +13,12 @@ export const radioGroupVariants = cva("flex", {
 });
 
 export const radioItemVariants = cva(
-  "aspect-square shrink-0 rounded-full border border-border-default bg-bg-canvas transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring-primary focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:border-bg-neutral",
+  "aspect-square shrink-0 rounded-full border border-border-neutral-subtle bg-bg-neutral-muted transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring-primary focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:border-bg-primary",
   {
     variants: {
       size: {
         sm: "h-4 w-4",
         md: "h-5 w-5",
-        lg: "h-6 w-6",
       },
     },
     defaultVariants: {
@@ -29,13 +28,12 @@ export const radioItemVariants = cva(
 );
 
 export const radioIndicatorVariants = cva(
-  "flex items-center justify-center after:block after:rounded-full after:bg-bg-neutral",
+  "flex items-center justify-center after:block after:rounded-full after:bg-bg-primary",
   {
     variants: {
       size: {
         sm: "after:h-2 after:w-2",
         md: "after:h-2.5 after:w-2.5",
-        lg: "after:h-3 after:w-3",
       },
     },
     defaultVariants: {

@@ -1,24 +1,8 @@
 import { forwardRef, useState } from "react";
+import { User2Line } from "@mingcute/react";
 import { cn } from "@/utils/cn";
 import type { AvatarProps } from "./Avatar.types";
 import { avatarVariants, avatarImageVariants, avatarFallbackVariants } from "./Avatar.variants";
-
-const UserIcon = () => (
-  <svg
-    className="h-[60%] w-[60%]"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth={1.5}
-    aria-hidden="true"
-  >
-    <path
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0"
-    />
-  </svg>
-);
 
 export const Avatar = forwardRef<HTMLSpanElement, AvatarProps>(function Avatar(
   { size, src, alt, fallback, className, ...rest },
@@ -44,7 +28,15 @@ export const Avatar = forwardRef<HTMLSpanElement, AvatarProps>(function Avatar(
         />
       ) : (
         <span className={avatarFallbackVariants()}>
-          {fallback ? typeof fallback === "string" ? fallback : fallback : <UserIcon />}
+          {fallback ? (
+            typeof fallback === "string" ? (
+              fallback
+            ) : (
+              fallback
+            )
+          ) : (
+            <User2Line className="h-[60%] w-[60%]" aria-hidden="true" />
+          )}
         </span>
       )}
     </span>

@@ -24,7 +24,7 @@ export const badgeVariants = cva(
     compoundVariants: [
       // Solid variants
       { variant: "solid", color: "default", className: "bg-bg-neutral-subtle text-fg-primary" },
-      { variant: "solid", color: "accent", className: "bg-bg-primary text-fg-on-dark" },
+      { variant: "solid", color: "accent", className: "bg-bg-primary text-fg-on-light" },
       { variant: "solid", color: "success", className: "bg-bg-success text-fg-on-dark" },
       { variant: "solid", color: "warning", className: "bg-bg-warning text-fg-on-dark" },
       { variant: "solid", color: "error", className: "bg-bg-danger text-fg-on-dark" },
@@ -42,7 +42,7 @@ export const badgeVariants = cva(
       {
         variant: "outline",
         color: "default",
-        className: "border-border-default text-fg-secondary",
+        className: "border-border-neutral-subtle text-fg-secondary",
       },
       {
         variant: "outline",

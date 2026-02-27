@@ -17,8 +17,7 @@ export interface SelectProps {
   error?: boolean;
   errorMessage?: string;
   placeholder?: string;
-  /** @default "md" */
-  size?: "sm" | "md" | "lg";
+  size?: "sm" | "md";
   fullWidth?: boolean;
 }
 
@@ -26,7 +25,7 @@ export interface SelectTriggerProps extends Omit<
   ComponentPropsWithoutRef<typeof RadixSelect.Trigger>,
   "size"
 > {
-  size?: "sm" | "md" | "lg";
+  size?: "sm" | "md";
   error?: boolean;
   fullWidth?: boolean;
 }

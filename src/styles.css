@@ -1,110 +1,110 @@
 @import "tailwindcss";
 
-/* Dark mode via data-theme attribute */
-@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+/* Light mode via data-theme attribute */
+@custom-variant light (&:where([data-theme="light"], [data-theme="light"] *));
 
 /* ======================================
-   Design Tokens — Light Theme (default)
+   Design Tokens — Dark Theme (default)
    Synced from Figma variables (2026-02-27)
    ====================================== */
 @theme {
   /* === Background / Base === */
-  --color-bg-canvas: #ffffff;
-  --color-bg-surface: #fafafa;
-  --color-bg-elevated: #f0f0f0;
-  --color-bg-sunken: #f0f0f0;
-  --color-bg-inverse: #000000;
+  --color-bg-canvas: #000000;
+  --color-bg-surface: #0a0a0a;
+  --color-bg-elevated: #1e1e1e;
+  --color-bg-sunken: #0a0a0a;
+  --color-bg-inverse: #ffffff;
   --color-bg-disabled: rgb(135 135 135 / 0.2);
-  --color-bg-backdrop: rgb(0 0 0 / 0.4);
-  --color-bg-floating: #ffffff;
+  --color-bg-backdrop: rgb(0 0 0 / 0.6);
+  --color-bg-floating: #373737;
 
   /* === Background / Semantic / Primary === */
   --color-bg-primary: #9ad81a;
   --color-bg-primary-hover: #7fc000;
   --color-bg-primary-active: #669a03;
-  --color-bg-primary-subtle: rgb(154 216 26 / 0.1);
-  --color-bg-primary-subtle-hover: rgb(154 216 26 / 0.2);
-  --color-bg-primary-subtle-active: rgb(154 216 26 / 0.3);
+  --color-bg-primary-subtle: rgb(154 216 26 / 0.2);
+  --color-bg-primary-subtle-hover: rgb(154 216 26 / 0.3);
+  --color-bg-primary-subtle-active: rgb(154 216 26 / 0.4);
 
   /* === Background / Semantic / Neutral === */
-  --color-bg-neutral: #0a0a0a;
-  --color-bg-neutral-hover: #1e1e1e;
-  --color-bg-neutral-active: #373737;
-  --color-bg-neutral-subtle: rgb(135 135 135 / 0.2);
-  --color-bg-neutral-subtle-hover: rgb(135 135 135 / 0.3);
-  --color-bg-neutral-subtle-active: rgb(135 135 135 / 0.4);
-  --color-bg-neutral-muted: rgb(135 135 135 / 0.05);
-  --color-bg-neutral-muted-hover: rgb(135 135 135 / 0.1);
-  --color-bg-neutral-muted-active: rgb(135 135 135 / 0.2);
+  --color-bg-neutral: #ffffff;
+  --color-bg-neutral-hover: #f0f0f0;
+  --color-bg-neutral-active: #e1e1e1;
+  --color-bg-neutral-subtle: rgb(135 135 135 / 0.3);
+  --color-bg-neutral-subtle-hover: rgb(135 135 135 / 0.4);
+  --color-bg-neutral-subtle-active: rgb(135 135 135 / 0.5);
+  --color-bg-neutral-muted: rgb(135 135 135 / 0.1);
+  --color-bg-neutral-muted-hover: rgb(135 135 135 / 0.2);
+  --color-bg-neutral-muted-active: rgb(135 135 135 / 0.3);
 
   /* === Background / Semantic / Success === */
   --color-bg-success: #10b981;
   --color-bg-success-hover: #059669;
   --color-bg-success-active: #047857;
-  --color-bg-success-subtle: rgb(16 185 129 / 0.1);
-  --color-bg-success-subtle-hover: rgb(16 185 129 / 0.2);
-  --color-bg-success-subtle-active: rgb(16 185 129 / 0.3);
+  --color-bg-success-subtle: rgb(16 185 129 / 0.2);
+  --color-bg-success-subtle-hover: rgb(16 185 129 / 0.3);
+  --color-bg-success-subtle-active: rgb(16 185 129 / 0.4);
 
   /* === Background / Semantic / Danger === */
   --color-bg-danger: #ef4444;
   --color-bg-danger-hover: #dc2626;
   --color-bg-danger-active: #b91c1c;
-  --color-bg-danger-subtle: rgb(239 68 68 / 0.1);
-  --color-bg-danger-subtle-hover: rgb(239 68 68 / 0.2);
-  --color-bg-danger-subtle-active: rgb(239 68 68 / 0.3);
+  --color-bg-danger-subtle: rgb(239 68 68 / 0.2);
+  --color-bg-danger-subtle-hover: rgb(239 68 68 / 0.3);
+  --color-bg-danger-subtle-active: rgb(239 68 68 / 0.4);
 
   /* === Background / Semantic / Warning === */
   --color-bg-warning: #f59e0b;
   --color-bg-warning-hover: #d97706;
   --color-bg-warning-active: #b45309;
-  --color-bg-warning-subtle: rgb(245 158 11 / 0.1);
-  --color-bg-warning-subtle-hover: rgb(245 158 11 / 0.2);
-  --color-bg-warning-subtle-active: rgb(245 158 11 / 0.3);
+  --color-bg-warning-subtle: rgb(245 158 11 / 0.2);
+  --color-bg-warning-subtle-hover: rgb(245 158 11 / 0.3);
+  --color-bg-warning-subtle-active: rgb(245 158 11 / 0.4);
 
   /* === Background / Semantic / Info === */
   --color-bg-info: #0ea5e9;
   --color-bg-info-hover: #0284c7;
   --color-bg-info-active: #0369a1;
-  --color-bg-info-subtle: rgb(14 165 233 / 0.1);
-  --color-bg-info-subtle-hover: rgb(14 165 233 / 0.2);
-  --color-bg-info-subtle-active: rgb(14 165 233 / 0.2);
+  --color-bg-info-subtle: rgb(14 165 233 / 0.2);
+  --color-bg-info-subtle-hover: rgb(14 165 233 / 0.3);
+  --color-bg-info-subtle-active: rgb(14 165 233 / 0.4);
 
   /* === Foreground / Content === */
-  --color-fg-primary: #0a0a0a;
-  --color-fg-secondary: #696969;
-  --color-fg-tertiary: #aaaaaa;
-  --color-fg-inverse: #ffffff;
-  --color-fg-disabled: #cdcdcd;
+  --color-fg-primary: #fafafa;
+  --color-fg-secondary: #aaaaaa;
+  --color-fg-tertiary: #696969;
+  --color-fg-inverse: #0a0a0a;
+  --color-fg-disabled: #505050;
 
   /* === Foreground / UI === */
-  --color-fg-placeholder: #aaaaaa;
+  --color-fg-placeholder: #696969;
   --color-fg-helper: #878787;
-  --color-fg-label: #373737;
+  --color-fg-label: #e1e1e1;
 
   /* === Foreground / Interactive === */
-  --color-fg-interactive: #669a03;
-  --color-fg-interactive-hover: #4e7206;
-  --color-fg-interactive-active: #345006;
+  --color-fg-interactive: #bcec54;
+  --color-fg-interactive-hover: #d1f189;
+  --color-fg-interactive-active: #e2f5b8;
 
   /* === Foreground / Status === */
-  --color-fg-success: #047857;
-  --color-fg-danger: #b91c1c;
-  --color-fg-warning: #b45309;
-  --color-fg-info: #0369a1;
+  --color-fg-success: #34d399;
+  --color-fg-danger: #f87171;
+  --color-fg-warning: #fbbf24;
+  --color-fg-info: #38bdf8;
 
   /* === Foreground / On === */
   --color-fg-on-dark: #ffffff;
   --color-fg-on-light: #0a0a0a;
 
   /* === Border / Base === */
-  --color-border-subtle: #e1e1e1;
-  --color-border-default: #cdcdcd;
+  --color-border-subtle: #373737;
+  --color-border-default: #505050;
   --color-border-strong: #aaaaaa;
-  --color-border-disabled: rgb(135 135 135 / 0.1);
-  --color-border-inverse: #373737;
+  --color-border-disabled: rgb(135 135 135 / 0.2);
+  --color-border-inverse: #e1e1e1;
 
   /* === Border / Semantic === */
-  --color-border-primary: #669a03;
+  --color-border-primary: #bcec54;
   --color-border-primary-subtle: rgb(154 216 26 / 0.2);
   --color-border-neutral-subtle: rgb(135 135 135 / 0.2);
   --color-border-success: #10b981;
@@ -118,7 +118,7 @@
 
   /* === Ring / Focus === */
   --color-ring-primary: #9ad81a;
-  --color-ring-neutral: #0a0a0a;
+  --color-ring-neutral: #ffffff;
   --color-ring-success: #10b981;
   --color-ring-danger: #ef4444;
   --color-ring-warning: #f59e0b;
@@ -141,114 +141,114 @@
   --font-mono: "Geist Mono", ui-monospace, monospace;
 
   /* === Shadows === */
-  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.3);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.4), 0 2px 4px -2px rgb(0 0 0 / 0.3);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.4), 0 4px 6px -4px rgb(0 0 0 / 0.3);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.4), 0 8px 10px -6px rgb(0 0 0 / 0.3);
 }
 
 /* ======================================
-   Dark Theme Override
+   Light Theme Override
    ====================================== */
 @layer theme {
-  [data-theme="dark"] {
+  [data-theme="light"] {
     /* Background / Base */
-    --color-bg-canvas: #000000;
-    --color-bg-surface: #0a0a0a;
-    --color-bg-elevated: #1e1e1e;
-    --color-bg-sunken: #0a0a0a;
-    --color-bg-inverse: #ffffff;
+    --color-bg-canvas: #ffffff;
+    --color-bg-surface: #fafafa;
+    --color-bg-elevated: #f0f0f0;
+    --color-bg-sunken: #f0f0f0;
+    --color-bg-inverse: #000000;
     --color-bg-disabled: rgb(135 135 135 / 0.2);
-    --color-bg-backdrop: rgb(0 0 0 / 0.6);
-    --color-bg-floating: #373737;
+    --color-bg-backdrop: rgb(0 0 0 / 0.4);
+    --color-bg-floating: #ffffff;
 
     /* Background / Semantic / Primary */
     --color-bg-primary: #9ad81a;
     --color-bg-primary-hover: #7fc000;
     --color-bg-primary-active: #669a03;
-    --color-bg-primary-subtle: rgb(154 216 26 / 0.2);
-    --color-bg-primary-subtle-hover: rgb(154 216 26 / 0.3);
-    --color-bg-primary-subtle-active: rgb(154 216 26 / 0.4);
+    --color-bg-primary-subtle: rgb(154 216 26 / 0.1);
+    --color-bg-primary-subtle-hover: rgb(154 216 26 / 0.2);
+    --color-bg-primary-subtle-active: rgb(154 216 26 / 0.3);
 
     /* Background / Semantic / Neutral */
-    --color-bg-neutral: #ffffff;
-    --color-bg-neutral-hover: #f0f0f0;
-    --color-bg-neutral-active: #e1e1e1;
-    --color-bg-neutral-subtle: rgb(135 135 135 / 0.3);
-    --color-bg-neutral-subtle-hover: rgb(135 135 135 / 0.4);
-    --color-bg-neutral-subtle-active: rgb(135 135 135 / 0.5);
-    --color-bg-neutral-muted: rgb(135 135 135 / 0.1);
-    --color-bg-neutral-muted-hover: rgb(135 135 135 / 0.2);
-    --color-bg-neutral-muted-active: rgb(135 135 135 / 0.3);
+    --color-bg-neutral: #0a0a0a;
+    --color-bg-neutral-hover: #1e1e1e;
+    --color-bg-neutral-active: #373737;
+    --color-bg-neutral-subtle: rgb(135 135 135 / 0.2);
+    --color-bg-neutral-subtle-hover: rgb(135 135 135 / 0.3);
+    --color-bg-neutral-subtle-active: rgb(135 135 135 / 0.4);
+    --color-bg-neutral-muted: rgb(135 135 135 / 0.05);
+    --color-bg-neutral-muted-hover: rgb(135 135 135 / 0.1);
+    --color-bg-neutral-muted-active: rgb(135 135 135 / 0.2);
 
     /* Background / Semantic / Success */
     --color-bg-success: #10b981;
     --color-bg-success-hover: #059669;
     --color-bg-success-active: #047857;
-    --color-bg-success-subtle: rgb(16 185 129 / 0.2);
-    --color-bg-success-subtle-hover: rgb(16 185 129 / 0.3);
-    --color-bg-success-subtle-active: rgb(16 185 129 / 0.4);
+    --color-bg-success-subtle: rgb(16 185 129 / 0.1);
+    --color-bg-success-subtle-hover: rgb(16 185 129 / 0.2);
+    --color-bg-success-subtle-active: rgb(16 185 129 / 0.3);
 
     /* Background / Semantic / Danger */
     --color-bg-danger: #ef4444;
     --color-bg-danger-hover: #dc2626;
     --color-bg-danger-active: #b91c1c;
-    --color-bg-danger-subtle: rgb(239 68 68 / 0.2);
-    --color-bg-danger-subtle-hover: rgb(239 68 68 / 0.3);
-    --color-bg-danger-subtle-active: rgb(239 68 68 / 0.4);
+    --color-bg-danger-subtle: rgb(239 68 68 / 0.1);
+    --color-bg-danger-subtle-hover: rgb(239 68 68 / 0.2);
+    --color-bg-danger-subtle-active: rgb(239 68 68 / 0.3);
 
     /* Background / Semantic / Warning */
     --color-bg-warning: #f59e0b;
     --color-bg-warning-hover: #d97706;
     --color-bg-warning-active: #b45309;
-    --color-bg-warning-subtle: rgb(245 158 11 / 0.2);
-    --color-bg-warning-subtle-hover: rgb(245 158 11 / 0.3);
-    --color-bg-warning-subtle-active: rgb(245 158 11 / 0.4);
+    --color-bg-warning-subtle: rgb(245 158 11 / 0.1);
+    --color-bg-warning-subtle-hover: rgb(245 158 11 / 0.2);
+    --color-bg-warning-subtle-active: rgb(245 158 11 / 0.3);
 
     /* Background / Semantic / Info */
     --color-bg-info: #0ea5e9;
     --color-bg-info-hover: #0284c7;
     --color-bg-info-active: #0369a1;
-    --color-bg-info-subtle: rgb(14 165 233 / 0.2);
-    --color-bg-info-subtle-hover: rgb(14 165 233 / 0.3);
-    --color-bg-info-subtle-active: rgb(14 165 233 / 0.4);
+    --color-bg-info-subtle: rgb(14 165 233 / 0.1);
+    --color-bg-info-subtle-hover: rgb(14 165 233 / 0.2);
+    --color-bg-info-subtle-active: rgb(14 165 233 / 0.2);
 
     /* Foreground / Content */
-    --color-fg-primary: #fafafa;
-    --color-fg-secondary: #aaaaaa;
-    --color-fg-tertiary: #696969;
-    --color-fg-inverse: #0a0a0a;
-    --color-fg-disabled: #505050;
+    --color-fg-primary: #0a0a0a;
+    --color-fg-secondary: #696969;
+    --color-fg-tertiary: #aaaaaa;
+    --color-fg-inverse: #ffffff;
+    --color-fg-disabled: #cdcdcd;
 
     /* Foreground / UI */
-    --color-fg-placeholder: #696969;
+    --color-fg-placeholder: #aaaaaa;
     --color-fg-helper: #878787;
-    --color-fg-label: #e1e1e1;
+    --color-fg-label: #373737;
 
     /* Foreground / Interactive */
-    --color-fg-interactive: #bcec54;
-    --color-fg-interactive-hover: #d1f189;
-    --color-fg-interactive-active: #e2f5b8;
+    --color-fg-interactive: #669a03;
+    --color-fg-interactive-hover: #4e7206;
+    --color-fg-interactive-active: #345006;
 
     /* Foreground / Status */
-    --color-fg-success: #34d399;
-    --color-fg-danger: #f87171;
-    --color-fg-warning: #fbbf24;
-    --color-fg-info: #38bdf8;
+    --color-fg-success: #047857;
+    --color-fg-danger: #b91c1c;
+    --color-fg-warning: #b45309;
+    --color-fg-info: #0369a1;
 
     /* Foreground / On */
     --color-fg-on-dark: #ffffff;
     --color-fg-on-light: #0a0a0a;
 
     /* Border / Base */
-    --color-border-subtle: #373737;
-    --color-border-default: #505050;
+    --color-border-subtle: #e1e1e1;
+    --color-border-default: #cdcdcd;
     --color-border-strong: #aaaaaa;
-    --color-border-disabled: rgb(135 135 135 / 0.2);
-    --color-border-inverse: #e1e1e1;
+    --color-border-disabled: rgb(135 135 135 / 0.1);
+    --color-border-inverse: #373737;
 
     /* Border / Semantic */
-    --color-border-primary: #bcec54;
+    --color-border-primary: #669a03;
     --color-border-primary-subtle: rgb(154 216 26 / 0.2);
     --color-border-neutral-subtle: rgb(135 135 135 / 0.2);
     --color-border-success: #10b981;
@@ -262,17 +262,17 @@
 
     /* Ring / Focus */
     --color-ring-primary: #9ad81a;
-    --color-ring-neutral: #ffffff;
+    --color-ring-neutral: #0a0a0a;
     --color-ring-success: #10b981;
     --color-ring-danger: #ef4444;
     --color-ring-warning: #f59e0b;
     --color-ring-info: #0ea5e9;
 
     /* Shadows */
-    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.3);
-    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.4), 0 2px 4px -2px rgb(0 0 0 / 0.3);
-    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.4), 0 4px 6px -4px rgb(0 0 0 / 0.3);
-    --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.4), 0 8px 10px -6px rgb(0 0 0 / 0.3);
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
   }
 }
 

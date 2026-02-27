@@ -24,11 +24,11 @@ export const Switch = forwardRef<HTMLButtonElement, SwitchProps>(function Switch
       {(label || description) && (
         <div className="flex flex-col gap-0.5">
           {label && (
-            <label htmlFor={switchId} className="text-sm font-medium text-fg-primary leading-none">
+            <label htmlFor={switchId} className="text-sm font-medium text-fg-label leading-none">
               {label}
             </label>
           )}
-          {description && <p className="text-sm text-fg-tertiary">{description}</p>}
+          {description && <p className="text-xs text-fg-helper">{description}</p>}
         </div>
       )}
     </div>

@@ -5,6 +5,9 @@ const meta: Meta<typeof Avatar> = {
   title: "Components/Avatar",
   component: Avatar,
   tags: ["autodocs"],
+  argTypes: {
+    fallback: { table: { disable: true } },
+  },
 };
 
 export default meta;

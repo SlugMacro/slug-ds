@@ -1,8 +1,7 @@
 import type { TextareaHTMLAttributes } from "react";
 
 export interface TextareaProps extends Omit<TextareaHTMLAttributes<HTMLTextAreaElement>, "size"> {
-  /** @default "md" */
-  size?: "sm" | "md" | "lg";
+  size?: "sm" | "md";
   label?: string;
   helperText?: string;
   error?: boolean;

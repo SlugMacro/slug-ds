@@ -57,9 +57,15 @@ describe("Input", () => {
       expect(screen.getByText("@gmail.com")).toBeInTheDocument();
     });
 
-    it("applies size classes", () => {
-      render(<Input aria-label="Small" size="sm" />);
-      expect(screen.getByRole("textbox").className).toContain("h-8");
+    it("renders all size variants", () => {
+      const sizes = ["sm", "md"] as const;
+      const sizeClasses = { sm: "h-9", md: "h-11" };
+
+      for (const size of sizes) {
+        const { unmount } = render(<Input aria-label="Test" size={size} />);
+        expect(screen.getByRole("textbox").className).toContain(sizeClasses[size]);
+        unmount();
+      }
     });
 
     it("merges custom className", () => {

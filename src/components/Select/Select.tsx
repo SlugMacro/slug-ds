@@ -17,33 +17,9 @@ import {
   selectSeparatorVariants,
 } from "./Select.variants";
 
+import { CheckLine, DownSmallLine } from "@mingcute/react";
+
 const SelectContext = createContext<{ labelId?: string; descriptionId?: string }>({});
-
-const ChevronDownIcon = () => (
-  <svg
-    className="h-4 w-4 opacity-50"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth={2}
-    aria-hidden="true"
-  >
-    <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
-  </svg>
-);
-
-const CheckIcon = () => (
-  <svg
-    className="h-4 w-4"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth={2}
-    aria-hidden="true"
-  >
-    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-  </svg>
-);
 
 function SelectRoot({
   children,
@@ -65,9 +41,9 @@ function SelectRoot({
     <SelectContext.Provider
       value={{ labelId, descriptionId: hasDescription ? descriptionId : undefined }}
     >
-      <div className={cn("inline-flex flex-col gap-1.5", fullWidth && "w-full")}>
+      <div className={cn("inline-flex flex-col gap-2", fullWidth && "w-full")}>
         {label && (
-          <span id={labelId} className="text-sm font-medium text-fg-primary">
+          <span id={labelId} className="text-sm font-medium text-fg-label">
             {label}
           </span>
         )}
@@ -86,7 +62,7 @@ function SelectRoot({
         {hasDescription && (
           <p
             id={descriptionId}
-            className={cn("text-sm", error ? "text-fg-danger" : "text-fg-tertiary")}
+            className={cn("text-xs", error ? "text-fg-danger" : "text-fg-helper")}
           >
             {error ? errorMessage : helperText}
           </p>
@@ -113,7 +89,7 @@ const SelectTrigger = forwardRef<HTMLButtonElement, SelectTriggerProps>(function
     >
       {children}
       <RadixSelect.Icon>
-        <ChevronDownIcon />
+        <DownSmallLine className="h-4 w-4 opacity-50" aria-hidden="true" />
       </RadixSelect.Icon>
     </RadixSelect.Trigger>
   );
@@ -152,7 +128,7 @@ const SelectItem = forwardRef<HTMLDivElement, SelectItemProps>(function SelectIt
     <RadixSelect.Item ref={ref} className={cn(selectItemVariants(), className)} {...rest}>
       <span className="absolute left-2 flex h-3.5 w-3.5 items-center justify-center">
         <RadixSelect.ItemIndicator>
-          <CheckIcon />
+          <CheckLine className="h-4 w-4" aria-hidden="true" />
         </RadixSelect.ItemIndicator>
       </span>
       <RadixSelect.ItemText>{children}</RadixSelect.ItemText>

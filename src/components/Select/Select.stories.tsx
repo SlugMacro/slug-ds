@@ -29,7 +29,7 @@ export const Default: Story = {
 export const AllSizes: Story = {
   render: () => (
     <div className="space-y-4">
-      {(["sm", "md", "lg"] as const).map((size) => (
+      {(["sm", "md"] as const).map((size) => (
         <Select key={size} label={`Size: ${size}`}>
           <Select.Trigger size={size}>
             <span>Select...</span>

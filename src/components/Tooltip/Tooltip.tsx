@@ -42,7 +42,7 @@ export function Tooltip({
           className={cn(tooltipContentVariants())}
         >
           {content}
-          <RadixTooltip.Arrow className="fill-fg-primary" />
+          <RadixTooltip.Arrow className="fill-bg-neutral" />
         </RadixTooltip.Content>
       </RadixTooltip.Portal>
     </RadixTooltip.Root>

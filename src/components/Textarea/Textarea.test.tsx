@@ -43,8 +43,8 @@ describe("Textarea", () => {
     });
 
     it("renders all size variants", () => {
-      const sizes = ["sm", "md", "lg"] as const;
-      const sizeClasses = { sm: "rounded-md", md: "rounded-lg", lg: "py-3" };
+      const sizes = ["sm", "md"] as const;
+      const sizeClasses = { sm: "rounded-md", md: "rounded-lg" };
 
       for (const size of sizes) {
         const { unmount } = render(<Textarea size={size} aria-label="Message" />);

@@ -18,9 +18,21 @@ describe("Button", () => {
       const { container } = render(
         <>
           <Button intent="primary">Primary</Button>
-          <Button intent="secondary">Secondary</Button>
-          <Button intent="ghost">Ghost</Button>
+          <Button intent="neutral">Neutral</Button>
+          <Button intent="success">Success</Button>
           <Button intent="danger">Danger</Button>
+        </>,
+      );
+      expect(container.querySelectorAll("button")).toHaveLength(4);
+    });
+
+    it("renders all variant styles", () => {
+      const { container } = render(
+        <>
+          <Button variant="solid">Solid</Button>
+          <Button variant="subtle">Subtle</Button>
+          <Button variant="outline">Outline</Button>
+          <Button variant="ghost">Ghost</Button>
         </>,
       );
       expect(container.querySelectorAll("button")).toHaveLength(4);
@@ -29,14 +41,16 @@ describe("Button", () => {
     it("renders all size variants", () => {
       render(
         <>
+          <Button size="xs">XS</Button>
           <Button size="sm">Small</Button>
           <Button size="md">Medium</Button>
           <Button size="lg">Large</Button>
         </>,
       );
-      expect(screen.getByText("Small").className).toContain("h-8");
-      expect(screen.getByText("Medium").className).toContain("h-10");
-      expect(screen.getByText("Large").className).toContain("h-12");
+      expect(screen.getByText("XS").className).toContain("h-7");
+      expect(screen.getByText("Small").className).toContain("h-9");
+      expect(screen.getByText("Medium").className).toContain("h-11");
+      expect(screen.getByText("Large").className).toContain("h-13");
     });
 
     it("renders fullWidth", () => {
@@ -57,6 +71,16 @@ describe("Button", () => {
     it("merges custom className", () => {
       render(<Button className="custom">Custom</Button>);
       expect(screen.getByText("Custom").className).toContain("custom");
+    });
+
+    it("applies compound variant classes for intent × variant", () => {
+      render(
+        <Button intent="danger" variant="outline">
+          Danger Outline
+        </Button>,
+      );
+      const btn = screen.getByText("Danger Outline");
+      expect(btn.className).toContain("border");
     });
   });
 

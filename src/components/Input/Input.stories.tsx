@@ -6,10 +6,12 @@ const meta: Meta<typeof Input> = {
   component: Input,
   tags: ["autodocs"],
   argTypes: {
-    size: { control: "select", options: ["sm", "md", "lg"] },
+    size: { control: "select", options: ["sm", "md"] },
     error: { control: "boolean" },
     disabled: { control: "boolean" },
     fullWidth: { control: "boolean" },
+    leftAddon: { table: { disable: true } },
+    rightAddon: { table: { disable: true } },
   },
 };
 
@@ -28,7 +30,6 @@ export const AllSizes: Story = {
     <div className="flex flex-col gap-4 w-72">
       <Input label="Small" size="sm" placeholder="Small input" />
       <Input label="Medium" size="md" placeholder="Medium input" />
-      <Input label="Large" size="lg" placeholder="Large input" />
     </div>
   ),
 };

@@ -24,9 +24,9 @@ export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(function 
   const hasDescription = Boolean(error ? errorMessage : helperText);
 
   return (
-    <div className={cn(textareaWrapperVariants({ fullWidth }), "flex-col gap-1.5")}>
+    <div className={cn(textareaWrapperVariants({ fullWidth }), "flex-col gap-2")}>
       {label && (
-        <label htmlFor={textareaId} className="text-sm font-medium text-fg-primary">
+        <label htmlFor={textareaId} className="text-sm font-medium text-fg-label">
           {label}
         </label>
       )}
@@ -41,7 +41,7 @@ export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(function 
       {hasDescription && (
         <p
           id={descriptionId}
-          className={cn("text-sm", error ? "text-fg-danger" : "text-fg-tertiary")}
+          className={cn("text-xs", error ? "text-fg-danger" : "text-fg-helper")}
         >
           {error ? errorMessage : helperText}
         </p>

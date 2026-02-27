@@ -4,11 +4,19 @@ import { Spinner } from "@/components/Spinner";
 import type { ButtonProps } from "./Button.types";
 import { buttonVariants } from "./Button.variants";
 
+const spinnerSizeMap = {
+  xs: "xs",
+  sm: "sm",
+  md: "md",
+  lg: "md",
+} as const;
+
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   (
     {
       intent,
-      size,
+      variant,
+      size = "md",
       fullWidth,
       loading = false,
       leftIcon,
@@ -25,12 +33,12 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     return (
       <button
         ref={ref}
-        className={cn(buttonVariants({ intent, size, fullWidth }), className)}
+        className={cn(buttonVariants({ intent, variant, size, fullWidth }), className)}
         disabled={isDisabled}
         aria-busy={loading || undefined}
         {...rest}
       >
-        {loading ? <Spinner size="xs" /> : leftIcon}
+        {loading ? <Spinner size={spinnerSizeMap[size]} /> : leftIcon}
         {children}
         {rightIcon}
       </button>

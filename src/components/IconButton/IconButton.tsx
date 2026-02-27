@@ -4,10 +4,10 @@ import { Spinner } from "@/components/Spinner";
 import type { IconButtonProps } from "./IconButton.types";
 import { iconButtonVariants } from "./IconButton.variants";
 
-const spinnerSizeMap = { sm: "xs", md: "sm", lg: "sm" } as const;
+const spinnerSizeMap = { xs: "xs", sm: "sm", md: "md", lg: "md" } as const;
 
 export const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(function IconButton(
-  { intent, size = "md", icon, loading = false, disabled, className, ...rest },
+  { intent, variant, size = "md", icon, loading = false, disabled, className, ...rest },
   ref,
 ) {
   const isDisabled = disabled || loading;
@@ -15,7 +15,7 @@ export const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(functio
   return (
     <button
       ref={ref}
-      className={cn(iconButtonVariants({ intent, size }), className)}
+      className={cn(iconButtonVariants({ intent, variant, size }), className)}
       disabled={isDisabled}
       aria-busy={loading || undefined}
       {...rest}

@@ -28,10 +28,10 @@ const RadioRoot = forwardRef<HTMLDivElement, RadioGroupProps>(function RadioRoot
 
   return (
     <fieldset className="flex flex-col gap-2">
-      {label && <legend className="text-sm font-medium text-fg-primary">{label}</legend>}
+      {label && <legend className="text-sm font-medium text-fg-label">{label}</legend>}
       {group}
       {hasError && (
-        <p id={errorId} className="text-sm text-fg-danger">
+        <p id={errorId} className="text-xs text-fg-danger">
           {errorMessage}
         </p>
       )}
@@ -59,11 +59,11 @@ const RadioItem = forwardRef<HTMLButtonElement, RadioItemProps>(function RadioIt
       {(label || description) && (
         <div className="flex flex-col gap-0.5">
           {label && (
-            <label htmlFor={itemId} className="text-sm font-medium text-fg-primary leading-none">
+            <label htmlFor={itemId} className="text-sm font-medium text-fg-label leading-none">
               {label}
             </label>
           )}
-          {description && <p className="text-sm text-fg-tertiary">{description}</p>}
+          {description && <p className="text-xs text-fg-helper">{description}</p>}
         </div>
       )}
     </div>

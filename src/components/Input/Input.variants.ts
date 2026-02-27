@@ -13,16 +13,15 @@ export const inputWrapperVariants = cva("inline-flex", {
 });
 
 export const inputVariants = cva(
-  "w-full bg-bg-canvas text-fg-primary border border-border-default placeholder:text-fg-tertiary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring-primary focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50",
+  "w-full bg-bg-neutral-muted text-fg-primary border border-border-neutral-subtle placeholder:text-fg-placeholder transition-colors focus-visible:outline-none focus-visible:border-border-inverse focus-visible:ring-1 focus-visible:ring-border-inverse disabled:bg-bg-disabled disabled:text-fg-disabled disabled:border-transparent disabled:pointer-events-none",
   {
     variants: {
       size: {
-        sm: "h-8 px-3 text-sm rounded-md",
-        md: "h-10 px-3 text-sm rounded-lg",
-        lg: "h-12 px-4 text-base rounded-lg",
+        sm: "h-9 px-3 text-sm rounded-md",
+        md: "h-11 px-4 text-base rounded-lg",
       },
       error: {
-        true: "border-border-danger focus-visible:ring-ring-danger",
+        true: "border-border-danger-subtle focus-visible:border-border-danger focus-visible:ring-border-danger",
         false: "",
       },
       hasLeftAddon: {
@@ -44,17 +43,16 @@ export const inputVariants = cva(
 );
 
 export const addonVariants = cva(
-  "inline-flex items-center border border-border-default bg-bg-surface text-fg-secondary",
+  "inline-flex items-center border border-border-neutral-subtle bg-bg-neutral-muted text-fg-secondary",
   {
     variants: {
       size: {
         sm: "px-3 text-sm",
-        md: "px-3 text-sm",
-        lg: "px-4 text-base",
+        md: "px-4 text-base",
       },
       position: {
-        left: "rounded-l-lg border-r-0",
-        right: "rounded-r-lg border-l-0",
+        left: "rounded-l-md border-r-0",
+        right: "rounded-r-md border-l-0",
       },
     },
     defaultVariants: {

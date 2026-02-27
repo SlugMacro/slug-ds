@@ -13,16 +13,15 @@ export const textareaWrapperVariants = cva("inline-flex", {
 });
 
 export const textareaVariants = cva(
-  "w-full bg-bg-canvas text-fg-primary border border-border-default placeholder:text-fg-tertiary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring-primary focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50",
+  "w-full bg-bg-neutral-muted text-fg-primary border border-border-neutral-subtle placeholder:text-fg-placeholder transition-colors focus-visible:outline-none focus-visible:border-border-inverse focus-visible:ring-1 focus-visible:ring-border-inverse disabled:bg-bg-disabled disabled:text-fg-disabled disabled:border-transparent disabled:pointer-events-none",
   {
     variants: {
       size: {
         sm: "px-3 py-2 text-sm rounded-md",
-        md: "px-3 py-2 text-sm rounded-lg",
-        lg: "px-4 py-3 text-base rounded-lg",
+        md: "px-4 py-2.5 text-base rounded-lg",
       },
       error: {
-        true: "border-border-danger focus-visible:ring-ring-danger",
+        true: "border-border-danger-subtle focus-visible:border-border-danger focus-visible:ring-border-danger",
         false: "",
       },
       resize: {

@@ -26,7 +26,7 @@ describe("Badge", () => {
       );
       const el = screen.getByText("Solid");
       expect(el.className).toContain("bg-bg-primary");
-      expect(el.className).toContain("text-fg-on-dark");
+      expect(el.className).toContain("text-fg-on-light");
     });
 
     it("applies subtle variant classes", () => {

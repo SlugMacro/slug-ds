@@ -17,7 +17,7 @@ export const Default: Story = {
 export const AllSizes: Story = {
   render: () => (
     <div className="space-y-4">
-      {(["sm", "md", "lg"] as const).map((size) => (
+      {(["sm", "md"] as const).map((size) => (
         <Checkbox key={size} size={size} label={`Size: ${size}`} />
       ))}
     </div>
@@ -59,7 +59,7 @@ export const ErrorState: Story = {
 export const CheckboxGroup: Story = {
   render: () => (
     <fieldset className="space-y-3">
-      <legend className="text-sm font-medium text-fg-primary mb-2">Notifications</legend>
+      <legend className="text-sm font-medium text-fg-label mb-2">Notifications</legend>
       <Checkbox label="Email" description="Get notified by email" defaultChecked />
       <Checkbox label="SMS" description="Get notified by text message" />
       <Checkbox label="Push" description="Get push notifications" />

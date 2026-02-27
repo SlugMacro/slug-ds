@@ -20,8 +20,8 @@ describe("Checkbox", () => {
     });
 
     it("renders all size variants", () => {
-      const sizes = ["sm", "md", "lg"] as const;
-      const sizeClasses = { sm: "h-4", md: "h-5", lg: "h-6" };
+      const sizes = ["sm", "md"] as const;
+      const sizeClasses = { sm: "h-4", md: "h-5" };
 
       for (const size of sizes) {
         const { unmount } = render(<Checkbox size={size} aria-label="Test" />);

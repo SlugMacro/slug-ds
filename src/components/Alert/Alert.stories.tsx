@@ -1,22 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
+import { InformationLine } from "@mingcute/react";
 import { Alert } from "./Alert";
-
-const InfoIcon = () => (
-  <svg
-    className="h-4 w-4"
-    xmlns="http://www.w3.org/2000/svg"
-    fill="none"
-    viewBox="0 0 24 24"
-    stroke="currentColor"
-    strokeWidth={2}
-  >
-    <path
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-    />
-  </svg>
-);
 
 const meta: Meta<typeof Alert> = {
   title: "Components/Alert",
@@ -25,6 +9,7 @@ const meta: Meta<typeof Alert> = {
   argTypes: {
     intent: { control: "select", options: ["info", "success", "warning", "error"] },
     variant: { control: "select", options: ["subtle", "solid", "outline"] },
+    icon: { table: { disable: true } },
   },
 };
 
@@ -84,7 +69,7 @@ export const AllVariants: Story = {
 
 export const WithIcon: Story = {
   render: () => (
-    <Alert icon={<InfoIcon />}>
+    <Alert icon={<InformationLine className="h-4 w-4" />}>
       <Alert.Title>With Icon</Alert.Title>
       <Alert.Description>This alert has a custom icon.</Alert.Description>
     </Alert>

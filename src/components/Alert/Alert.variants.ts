@@ -26,10 +26,22 @@ export const alertVariants = cva("relative flex w-full gap-3 rounded-lg p-4 text
     { variant: "solid", intent: "warning", className: "bg-bg-warning text-fg-on-dark" },
     { variant: "solid", intent: "error", className: "bg-bg-danger text-fg-on-dark" },
     // Outline
-    { variant: "outline", intent: "info", className: "border-border-info text-fg-info" },
-    { variant: "outline", intent: "success", className: "border-border-success text-fg-success" },
-    { variant: "outline", intent: "warning", className: "border-border-warning text-fg-warning" },
-    { variant: "outline", intent: "error", className: "border-border-danger text-fg-danger" },
+    { variant: "outline", intent: "info", className: "border-border-info-subtle text-fg-info" },
+    {
+      variant: "outline",
+      intent: "success",
+      className: "border-border-success-subtle text-fg-success",
+    },
+    {
+      variant: "outline",
+      intent: "warning",
+      className: "border-border-warning-subtle text-fg-warning",
+    },
+    {
+      variant: "outline",
+      intent: "error",
+      className: "border-border-danger-subtle text-fg-danger",
+    },
   ],
   defaultVariants: {
     variant: "subtle",

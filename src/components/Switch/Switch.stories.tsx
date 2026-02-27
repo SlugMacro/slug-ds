@@ -17,7 +17,7 @@ export const Default: Story = {
 export const AllSizes: Story = {
   render: () => (
     <div className="space-y-4">
-      {(["sm", "md", "lg"] as const).map((size) => (
+      {(["sm", "md"] as const).map((size) => (
         <Switch key={size} size={size} label={`Size: ${size}`} />
       ))}
     </div>
