@@ -1,6 +1,6 @@
 {
   "name": "slug-ds",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A production-grade React design system",
   "private": true,
   "type": "module",

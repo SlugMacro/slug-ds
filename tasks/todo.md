@@ -67,12 +67,13 @@
 
 ---
 
-## Phase 6: Documentation & Release — PLANNED
+## Phase 6: Documentation & Release — COMPLETE
 
-- [ ] Write `docs/TOKENS.md` with visual examples
-- [ ] Write `docs/PATTERNS.md` with composition guides
-- [ ] First `pnpm changeset` + version bump
-- [ ] First npm publish (or private registry)
+- [x] Write `docs/TOKENS.md` with full token reference
+- [x] Write `docs/PATTERNS.md` with composition guides
+- [x] First `pnpm changeset` + version bump to **0.1.0**
+- [x] CHANGELOG.md auto-generated
+- [ ] First npm publish (when ready)
 - [ ] Setup Chromatic for visual regression (optional)
 
 ---
@@ -85,3 +86,4 @@
 | ---------- | ------- | --------------------------------------------------------------- |
 | 2026-02-27 | 1-4     | Foundation + 24 components complete. 341 tests, all pass.       |
 | 2026-02-27 | 5       | +5 components (Tabs, Accordion, Popover, Heading, Alert). 391 tests, all pass. Build verified. |
+| 2026-02-27 | 6       | Docs (TOKENS.md, PATTERNS.md), CHANGELOG.md, version bump to 0.1.0. |
