@@ -57,7 +57,7 @@ DialogContent.displayName = "Dialog.Content";
 
 const DialogHeader = forwardRef<HTMLDivElement, DialogHeaderProps>(
   ({ className, children, ...rest }, ref) => (
-    <div ref={ref} className={cn("px-6 py-4 border-b border-border-default", className)} {...rest}>
+    <div ref={ref} className={cn("px-6 py-4 border-b border-border-neutral-subtle", className)} {...rest}>
       {children}
     </div>
   ),
@@ -69,7 +69,7 @@ const DialogFooter = forwardRef<HTMLDivElement, DialogFooterProps>(
   ({ className, children, ...rest }, ref) => (
     <div
       ref={ref}
-      className={cn("flex justify-end gap-2 px-6 py-4 border-t border-border-default", className)}
+      className={cn("flex justify-end gap-2 px-6 py-4 border-t border-border-neutral-subtle", className)}
       {...rest}
     >
       {children}

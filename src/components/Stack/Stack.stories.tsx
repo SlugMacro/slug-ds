@@ -11,7 +11,7 @@ export default meta;
 type Story = StoryObj<typeof Stack>;
 
 const Item = ({ children }: { children: React.ReactNode }) => (
-  <div className="px-4 py-2 bg-bg-surface border border-border-default rounded-md text-sm text-fg-primary">
+  <div className="px-4 py-2 bg-bg-surface border border-border-neutral-subtle rounded-md text-sm text-fg-primary">
     {children}
   </div>
 );

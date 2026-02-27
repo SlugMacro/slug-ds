@@ -12,7 +12,7 @@ type Story = StoryObj<typeof Box>;
 
 export const Default: Story = {
   render: () => (
-    <Box className="p-4 bg-bg-surface border border-border-default rounded-lg">
+    <Box className="p-4 bg-bg-surface border border-border-neutral-subtle rounded-lg">
       A basic Box rendering as a div
     </Box>
   ),
@@ -45,7 +45,7 @@ export const AsNav: Story = {
 
 export const WithTailwindClasses: Story = {
   render: () => (
-    <Box className="flex items-center justify-between p-4 bg-bg-surface border border-border-default rounded-lg shadow-md">
+    <Box className="flex items-center justify-between p-4 bg-bg-surface border border-border-neutral-subtle rounded-lg shadow-md">
       <span className="font-medium text-fg-primary">Styled with Tailwind</span>
       <span className="text-sm text-fg-tertiary">via className</span>
     </Box>

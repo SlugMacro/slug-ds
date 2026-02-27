@@ -20,7 +20,7 @@ const CardHeader = forwardRef<HTMLDivElement, CardHeaderProps>(
     return (
       <div
         ref={ref}
-        className={cn("px-5 py-4 border-b border-border-default", className)}
+        className={cn("px-5 py-4 border-b border-border-neutral-subtle", className)}
         {...rest}
       >
         {children}
@@ -48,7 +48,7 @@ const CardFooter = forwardRef<HTMLDivElement, CardFooterProps>(
     return (
       <div
         ref={ref}
-        className={cn("px-5 py-4 border-t border-border-default", className)}
+        className={cn("px-5 py-4 border-t border-border-neutral-subtle", className)}
         {...rest}
       >
         {children}

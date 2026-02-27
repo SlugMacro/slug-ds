@@ -5,7 +5,7 @@ export const dialogOverlayVariants = cva(
 );
 
 export const dialogContentVariants = cva(
-  "fixed left-1/2 top-1/2 z-50 -translate-x-1/2 -translate-y-1/2 bg-bg-canvas border border-border-default rounded-xl shadow-xl focus-visible:outline-none data-[state=open]:animate-content-in data-[state=closed]:animate-content-out",
+  "fixed left-1/2 top-1/2 z-50 -translate-x-1/2 -translate-y-1/2 bg-bg-canvas border border-border-neutral-subtle rounded-xl shadow-xl focus-visible:outline-none data-[state=open]:animate-content-in data-[state=closed]:animate-content-out",
   {
     variants: {
       size: {

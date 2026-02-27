@@ -32,15 +32,15 @@ export const DesignTokens: Story = {
         <h2 className="text-fg-primary text-xl font-bold mb-4">Surfaces</h2>
         <div className="grid grid-cols-3 gap-4">
           <div className="space-y-2">
-            <div className="w-full h-12 rounded-md bg-bg-canvas border border-border-default" />
+            <div className="w-full h-12 rounded-md bg-bg-canvas border border-border-neutral-subtle" />
             <p className="text-fg-secondary text-sm">bg-canvas</p>
           </div>
           <div className="space-y-2">
-            <div className="w-full h-12 rounded-md bg-bg-surface border border-border-default" />
+            <div className="w-full h-12 rounded-md bg-bg-surface border border-border-neutral-subtle" />
             <p className="text-fg-secondary text-sm">bg-surface</p>
           </div>
           <div className="space-y-2">
-            <div className="w-full h-12 rounded-md bg-bg-elevated border border-border-default" />
+            <div className="w-full h-12 rounded-md bg-bg-elevated border border-border-neutral-subtle" />
             <p className="text-fg-secondary text-sm">bg-elevated</p>
           </div>
         </div>

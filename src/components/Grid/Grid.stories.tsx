@@ -11,7 +11,7 @@ export default meta;
 type Story = StoryObj<typeof Grid>;
 
 const Cell = ({ children }: { children: React.ReactNode }) => (
-  <div className="p-4 bg-bg-surface border border-border-default rounded-md text-sm text-fg-primary text-center">
+  <div className="p-4 bg-bg-surface border border-border-neutral-subtle rounded-md text-sm text-fg-primary text-center">
     {children}
   </div>
 );
@@ -60,7 +60,7 @@ export const WithAlignment: Story = {
   render: () => (
     <Grid columns={3} gap={4} alignItems="center" className="h-48">
       <Cell>Short</Cell>
-      <div className="p-4 bg-bg-surface border border-border-default rounded-md text-sm text-fg-primary text-center h-24 flex items-center justify-center">
+      <div className="p-4 bg-bg-surface border border-border-neutral-subtle rounded-md text-sm text-fg-primary text-center h-24 flex items-center justify-center">
         Tall
       </div>
       <Cell>Short</Cell>
